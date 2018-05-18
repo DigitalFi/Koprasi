@@ -29,7 +29,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="Pilih Nama Koperasi" />
+                android:text="Pilih Nama Koperasi"
+                android:textSize="24dp"
+                android:textStyle="bold"/>
         </FrameLayout>
 
         <FrameLayout
@@ -74,7 +76,7 @@
                             android:text="Nama Koperasi :"
                             android:textAlignment="center"
                             android:textColor="#000"
-                            android:textSize="15dp" />
+                            android:textSize="20dp" />
                     </LinearLayout>
                 </RelativeLayout>
                 <RelativeLayout
@@ -133,7 +135,7 @@
                             android:text="No Badan Hukum :"
                             android:textAlignment="center"
                             android:textColor="#000"
-                            android:textSize="15dp" />
+                            android:textSize="18dp" />
                     </LinearLayout>
                 </RelativeLayout>
                 <RelativeLayout
@@ -175,7 +177,7 @@
                 android:weightSum="4">
 
                 <RelativeLayout
-                    android:layout_width="0dp"
+                    android:layout_width="5dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:padding="10dp">
@@ -192,7 +194,7 @@
                             android:text="Alamat Koperasi :"
                             android:textAlignment="center"
                             android:textColor="#000"
-                            android:textSize="15dp" />
+                            android:textSize="20dp" />
                     </LinearLayout>
                 </RelativeLayout>
                 <RelativeLayout
@@ -233,10 +235,10 @@
                 android:weightSum="4">
 
                 <RelativeLayout
-                    android:layout_width="0dp"
+                    android:layout_width="2dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:padding="10dp">
+                    android:padding="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -250,7 +252,7 @@
                             android:text="Telepon Koperasi :"
                             android:textAlignment="center"
                             android:textColor="#000"
-                            android:textSize="15dp" />
+                            android:textSize="20dp" />
                     </LinearLayout>
                 </RelativeLayout>
                 <RelativeLayout
@@ -283,11 +285,13 @@
             android:layout_height="wrap_content"
             android:padding="5dp">
 
-            <Button
+            <android.support.v7.widget.AppCompatButton
                 android:id="@+id/next"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="NEXT"
+                android:layout_height="wrap_content"
+                android:text="NEXT"
                 android:onClick="search" />
         </LinearLayout>
 
@@ -296,10 +300,12 @@
             android:layout_height="wrap_content"
             android:padding="5dp">
 
-            <Button
+            <android.support.v7.widget.AppCompatButton
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Belum Teregrsitasi" />
+                android:layout_height="wrap_content"
+                android:text="Belum Teregrsitasi" />
         </LinearLayout>
 
     </LinearLayout>

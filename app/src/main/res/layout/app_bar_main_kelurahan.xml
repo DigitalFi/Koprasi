@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#d4d5d6"
     tools:context="com.project.rezasaputra.koprasi.Activity.MainKelurahan">
 
     <android.support.design.widget.AppBarLayout
@@ -19,6 +20,7 @@
             app:popupTheme="@style/PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+
 
     <include layout="@layout/content_main_kelurahan" />
 

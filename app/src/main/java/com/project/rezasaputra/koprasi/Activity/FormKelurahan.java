@@ -153,4 +153,5 @@ public class FormKelurahan extends AppCompatActivity {
         Intent intent = new Intent(FormKelurahan.this, Form1Kelurahan.class);
         startActivity(intent);
     }
+
 }

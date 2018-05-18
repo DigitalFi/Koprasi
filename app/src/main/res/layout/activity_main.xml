@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="#568bb7"
     tools:context="com.project.rezasaputra.koprasi.Activity.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30dp"
-        android:text="Sistem Informasi Pokja"
+        android:text="Sistem Informasi POKJA"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

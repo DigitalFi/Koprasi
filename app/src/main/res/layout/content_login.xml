@@ -62,7 +62,7 @@
         android:id="@+id/btnLinkToRegisterScreen"
         android:layout_marginTop="20dp"
         android:textColor="@color/colorAccent"
-        android:text="REGISTER"
+        android:text="I Haven't Account? Register"
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
