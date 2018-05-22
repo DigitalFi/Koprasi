@@ -62,7 +62,8 @@
         <activity
             android:name=".Activity.Form2Kelurahan1"
             android:label="@string/title_activity_form2_kelurahan1"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".Activity.Form3Kelurahan"></activity>
     </application>
 
 </manifest>

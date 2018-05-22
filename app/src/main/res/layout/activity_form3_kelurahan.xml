@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context="com.project.rezasaputra.koprasi.Activity.Form2Kelurahan">
+    tools:context="com.project.rezasaputra.koprasi.Activity.Form3Kelurahan">
+
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -29,12 +29,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/PopupOverlay" />
+                app:popupTheme="@style/Theme.Design.NoActionBar" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_form2_kelurahan" />
 
+    <include
+        layout="@layout/content_form3_kelurahan" />
 
-</android.support.design.widget.CoordinatorLayout>
+</android.support.constraint.ConstraintLayout>
