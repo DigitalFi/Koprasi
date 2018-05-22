@@ -15,14 +15,14 @@
         android:layout_width="match_parent"
         android:layout_height="300dp">
 
-       <!-- <ImageView
+       <ImageView
             android:id="@+id/ic_kelurahan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/textView2"
             android:layout_marginTop="11dp"
-            android:src="@drawable/imgdepok" /> -->
+            android:src="@drawable/kota" />
 
         <FrameLayout
             android:id="@+id/frameLayout"
