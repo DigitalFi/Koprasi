@@ -67,6 +67,10 @@
             android:name=".Activity.Form3Kelurahan"
             android:label="Temuan Koperasi Belum Terdaftar"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.Form2Kelurahan2"
+        android:label="Perkembangan Usaha"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>
