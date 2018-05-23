@@ -127,4 +127,9 @@ public class MainKelurahan extends AppCompatActivity
         Intent intent = new Intent(MainKelurahan.this, FormKelurahan.class);
         startActivity(intent);
     }
+
+    public void history(View view) {
+        Intent intent = new Intent(MainKelurahan.this, MainKelurahan.class);
+        startActivity(intent);
+    }
 }
