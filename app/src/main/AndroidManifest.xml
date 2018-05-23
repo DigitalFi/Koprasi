@@ -49,21 +49,24 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.Form1Kelurahan"
-            android:label="KELEMBAGAAN"
+            android:label="Data Kelembagaan"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.Form2Kelurahan"
-            android:label="@string/title_activity_form2_kelurahan"
+            android:label="POKJA Pembinaan Koperasi"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.Form1Kelurahan1"
-            android:label="DATA USAHA DAN KEUANGAN"
+            android:label="Data Usaha dan Keuangan"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.Form2Kelurahan1"
-            android:label="@string/title_activity_form2_kelurahan1"
+            android:label="Pekembangan Kelembagaan"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".Activity.Form3Kelurahan"></activity>
+        <activity
+            android:name=".Activity.Form3Kelurahan"
+            android:label="Temuan Koperasi Belum Terdaftar"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>
