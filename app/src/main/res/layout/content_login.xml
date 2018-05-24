@@ -9,6 +9,7 @@
 
     android:weightSum="1">
 
+
     <ImageView
         android:src="@drawable/ic_depok"
         android:layout_width="150dp"
@@ -63,7 +64,7 @@
         android:id="@+id/btnLinkToRegisterScreen"
         android:layout_marginTop="20dp"
         android:textColor="@color/colorAccent"
-        android:text="I Haven't Account? Register"
+        android:text="Saya Belum Punya Akun? Register"
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

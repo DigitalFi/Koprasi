@@ -37,10 +37,11 @@
                 android:layout_gravity="center"
                 android:elevation="20dp"
                 android:padding="5dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Data Awal"/>
+                    android:text="Data Awal" />
 
                 <android.support.design.widget.TextInputLayout
                     android:layout_marginTop="8dp"
