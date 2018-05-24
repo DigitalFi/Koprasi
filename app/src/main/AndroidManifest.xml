@@ -69,8 +69,12 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.Form2Kelurahan2"
-        android:label="Perkembangan Usaha"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:label="Perkembangan Usaha"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.Form2Kelurahan3"
+            android:label="Perkembangan Keuangan"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
     </application>
 
 </manifest>
