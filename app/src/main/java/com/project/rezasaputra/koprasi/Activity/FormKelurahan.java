@@ -106,7 +106,7 @@ public class FormKelurahan extends AppCompatActivity {
                         koperasiList.add(new koperasi_profile("", "-Pilih Koperasi-", "-sample-", "-sample", "-sample"));
                         for(int i=0;i<jsonArray.length();i++){
                             JSONObject jsonObject1=jsonArray.getJSONObject(i);
-                            koperasiList.add(new koperasi_profile(jsonObject1.getString("id_koperasi"), jsonObject1.getString("nm_koperasi"), jsonObject1.getString("no_badan_hukum"), jsonObject1.getString("alamat_kantor"),jsonObject1.getString("no_tlp")));
+                            koperasiList.add(new koperasi_profile(jsonObject1.getString("id_koperasi"), jsonObject1.getString("nm_koperasi"), jsonObject1.getString("no_badan_hukum"), jsonObject1.getString("alamat_kantor"),jsonObject1.getString("no_tlp1")));
                         }
                         ArrayAdapter<koperasi_profile> adapter = new ArrayAdapter<koperasi_profile>(FormKelurahan.this, android.R.layout.simple_spinner_dropdown_item, koperasiList);
                         spinner.setAdapter(adapter);
@@ -123,8 +123,8 @@ public class FormKelurahan extends AppCompatActivity {
         }){@Override
         public Map<String, String> getParams(){
             Map<String, String> params = new HashMap<>();
-            params.put("id_kec", kecamatan);
-            params.put("id_kel", kelurahan);
+            params.put("id_kecamatan", kecamatan);
+            params.put("id_kelurahan", kelurahan);
             return params;
         }
         };
