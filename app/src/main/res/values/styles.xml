@@ -12,4 +12,14 @@
 
     <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="TWOHSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#08f900</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#fd143b</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#FF757575</item>
+    </style>
 </resources>
