@@ -166,7 +166,7 @@ public class Login extends Activity {
                             startActivity(intent);
                         }else{
                             Intent intent = new Intent(Login.this,
-                                    MainMenu.class);
+                                    MainPemkod.class);
                             startActivity(intent);
                         }
 
