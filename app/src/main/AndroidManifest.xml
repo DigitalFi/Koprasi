@@ -7,10 +7,12 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-feature android:name="android.hardware.camera" android:required="true"/>
-    <uses-permission android:name="android.permission.WRITE.EXTERNAL,STORAGE"/>
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
+    <uses-permission android:name="android.permission.WRITE.EXTERNAL,STORAGE" />
 
     <application
         android:name=".Activity.helper.AppController"
@@ -79,7 +81,12 @@
             android:name=".Activity.Form2Kelurahan3"
             android:label="Perkembangan Keuangan"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
+        <activity android:name=".Activity.notifikasi_pemkod" />
+        <activity android:name=".Activity.Daftar_koperasi_pemkod" />
+        <activity android:name=".Activity.history_data_pemkod" />
+        <activity android:name=".Activity.history_data_kelurahan" />
+        <activity android:name=".Activity.notifikasi_kecamatan" />
+        <activity android:name=".Activity.history_data_kecamatan"></activity>
     </application>
 
 </manifest>

@@ -11,16 +11,6 @@
     tools:context="com.project.rezasaputra.koprasi.Activity.FormKelurahan"
     tools:showIn="@layout/activity_form_kelurahan">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        
-        android:background="#fff"
-        android:elevation="20dp"
-        android:orientation="vertical"
-        android:padding="5dp"
-        tools:ignore="UselessParent">
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,286 +30,212 @@
             android:layout_height="wrap_content"
             android:padding="10dp">
 
-            <Spinner
-                android:id="@+id/namakoprasi"
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+                <LinearLayout
+                    android:id="@+id/kelurahan-history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp">
+
+
+                    <Spinner
+                        android:id="@+id/namakoprasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
         </FrameLayout>
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#eee"
-            android:orientation="vertical"
-            android:weightSum="4">
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="4">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fff"
-                            android:text="Nama Koperasi :"
-                            android:textAlignment="center"
-                            android:textColor="#000"
-                            android:textSize="18dp" />
-                    </LinearLayout>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/namaKp"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fff"
-                            android:text=""
-                            android:textAlignment="center"
-                            android:textColor="#000"
-                            android:textSize="15dp" />
-                    </LinearLayout>
-                </RelativeLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#eee"
-            android:orientation="vertical"
-            android:weightSum="4">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="4">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fff"
-                            android:text="No Badan Hukum :"
-                            android:textAlignment="center"
-                            android:textColor="#000"
-                            android:textSize="18dp" />
-                    </LinearLayout>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/badanhukumKp"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fff"
-                            android:text=""
-                            android:textAlignment="center"
-                            android:textColor="#000"
-                            android:textSize="15dp" />
-                    </LinearLayout>
-                </RelativeLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#eee"
-            android:orientation="vertical"
-            android:weightSum="4">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="4">
-
-                <RelativeLayout
-                    android:layout_width="5dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fff"
-                            android:text="Alamat Koperasi :"
-                            android:textAlignment="center"
-                            android:textColor="#000"
-                            android:textSize="18dp" />
-                    </LinearLayout>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/alamatKp"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fff"
-                            android:text=""
-                            android:textAlignment="center"
-                            android:textColor="#000"
-                            android:textSize="15dp" />
-                    </LinearLayout>
-                </RelativeLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#eee"
-            android:orientation="vertical"
-            android:weightSum="4">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:weightSum="4">
-
-                <RelativeLayout
-                    android:layout_width="2dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="5dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fff"
-                            android:text="Telepon Koperasi :"
-                            android:textAlignment="center"
-                            android:textColor="#000"
-                            android:textSize="18dp" />
-                    </LinearLayout>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/tlpKp"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#fff"
-                            android:text=""
-                            android:textAlignment="center"
-                            android:textColor="#000"
-                            android:textSize="15dp" />
-                    </LinearLayout>
-                </RelativeLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp">
-
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/next"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:onClick="search"
-                android:text="NEXT"
-                android:textColor="@android:color/white" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:orientation="horizontal">
 
-        <LinearLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:text="Nama Koperasi :"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/namaKp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp">
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp">
 
-            <android.support.v7.widget.AppCompatButton
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:text="Belum Teregrsitasi"
-                android:textColor="@android:color/white" />
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:text="No Badan Hukum :"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/badanhukumKp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:text="Alamat Koperasi :"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/alamatKp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+
+        <android.support.v7.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:text="Telepon Koperasi :"
+                    android:textColor="#000"
+                    android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/tlpKp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="Belum Teregrsitasi"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:onClick="search"
+                    android:text="NEXT"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+
         </LinearLayout>
 
     </LinearLayout>
-</LinearLayout>
+
 
