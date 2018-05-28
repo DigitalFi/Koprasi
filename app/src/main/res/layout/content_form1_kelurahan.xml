@@ -333,6 +333,23 @@
 
         </android.support.design.widget.TextInputLayout>
 
+
+        <!-- Capture picture button -->
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Foto Koperasi"
+            android:id="@+id/btnCapturePicture"
+            android:layout_gravity="left"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:onClick="onClick"
+            tools:ignore="OnClick" />
+
+
+
+
+
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/simpen"
             android:text="Next"

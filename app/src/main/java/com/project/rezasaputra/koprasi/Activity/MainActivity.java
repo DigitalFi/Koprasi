@@ -54,27 +54,6 @@ public class MainActivity extends AppCompatActivity {
             switchCompat1.setOnCheckedChangeListener(checkedChangeListener);
         }
     }
-
-    //CAPTURE IMAGE
-    public class CameraActivity extends AppCompatActivity {
-        static final int ACTION_IMAGE_CAPTURE = 1;
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.content_form_kelurahan);
-            Button buttonCamera = findViewById(R.id.btnCapturePicture);
-            buttonCamera.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent takeCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    if (takeCamera.resolveActivity(getPackageManager()) != null) {
-                        startActivityForResult(takeCamera, ACTION_IMAGE_CAPTURE);
-                    }
-                }
-            });
-        }
-    }
 }
 
 
