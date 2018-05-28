@@ -21,12 +21,14 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp">
 
+
             <EditText
                 android:id="@+id/et_form2_tgl_kop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Hari / Tanggal Temuan"
                 android:inputType="text" />
+
 
         </android.support.design.widget.TextInputLayout>
 
@@ -179,6 +181,7 @@
                 android:inputType="textEmailAddress" />
 
         </android.support.design.widget.TextInputLayout>
+
 
 
         <android.support.v7.widget.AppCompatButton

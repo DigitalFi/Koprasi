@@ -256,6 +256,28 @@
 
         </android.support.design.widget.TextInputLayout>
 
+        <!-- Capture picture button -->
+
+        <Button
+            android:id="@+id/btnCapturePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/btn_bg"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Foto Tempat Usaha"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/txt_font" />
+
+
+
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btnLogin"
             android:text="Next"

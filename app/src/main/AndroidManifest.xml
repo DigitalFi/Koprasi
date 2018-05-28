@@ -7,6 +7,10 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-permission android:name="android.permission.WRITE.EXTERNAL,STORAGE"/>
+
+
 
     <application
         android:name=".Activity.helper.AppController"
@@ -74,7 +78,8 @@
         <activity
             android:name=".Activity.Form2Kelurahan3"
             android:label="Perkembangan Keuangan"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"  />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
     </application>
 
 </manifest>
