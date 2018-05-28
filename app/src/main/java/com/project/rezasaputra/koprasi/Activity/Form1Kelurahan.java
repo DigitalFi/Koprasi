@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -52,14 +51,15 @@ public class Form1Kelurahan extends AppCompatActivity {
         setContentView(R.layout.activity_form1_kelurahan);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         form1 = getSharedPreferences("dataForm1", MODE_PRIVATE);
         idkop = getSharedPreferences("koperasi", MODE_PRIVATE);
         pref = getSharedPreferences("data", MODE_PRIVATE);
 
-        inputKeaktifan = (EditText) findViewById(R.id.et_keaktifan);
-        inputRapat = (EditText) findViewById(R.id.et_rapat);
-        inputJumlah = (EditText) findViewById(R.id.et_anggota_kop);
+        inputKeaktifan = (EditText) findViewById(R.id.et_tlp_kel);
+        inputRapat = (EditText) findViewById(R.id.et_website_kel);
+        inputJumlah = (EditText) findViewById(R.id.et_email_kel);
         simpen = (Button) findViewById(R.id.simpen);
         // Progress dialog
         pDialog = new ProgressDialog(this);

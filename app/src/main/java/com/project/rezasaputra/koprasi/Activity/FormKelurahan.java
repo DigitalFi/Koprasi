@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -41,6 +42,9 @@ public class FormKelurahan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_kelurahan);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         spinner=(Spinner)findViewById(R.id.namakoprasi);
 
         pref = getSharedPreferences("data", Context.MODE_PRIVATE);
@@ -92,6 +96,7 @@ public class FormKelurahan extends AppCompatActivity {
             }
         });
     }
+
     private void loadSpinnerData(final String kecamatan, final String kelurahan) {
         RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
 

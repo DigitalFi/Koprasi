@@ -13,349 +13,161 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:elevation="50dp"
-        android:padding="25dp">
+        android:elevation="50dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="10dp">
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:elevation="20dp">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:elevation="20dp"
-            android:padding="5dp">
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:text="I. Data Koperasi"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Keaktifan Koperasi"/>
+                android:text="Lengkapi Data Dibawah ini"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:hint="Nomor Telepon / Fax"
+                android:id="@+id/et_tlp_kel"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:hint="Website"
+                android:id="@+id/et_website_kel"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:hint="E-mail"
+                android:id="@+id/et_email_kel"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:hint="NPWP"
+                android:id="@+id/et_npwp_kel"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
 
-            <android.support.v7.widget.SwitchCompat
-                android:id="@+id/sw_button"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Aktif "
-                android:textColor="#000"
-                android:theme="@style/TWOHSwitch"/>
-
-
-
-        </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rapat Keanggotaan"/>
+                android:text="Status Kantor/Sekretaris"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
 
                 <android.support.v7.widget.SwitchCompat
-                    android:id="@+id/sw_button2"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/sw_button"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="20dp"
-                    android:text="RAT "
+                    android:text="Aktif/Tidak "
                     android:textColor="#000"
                     android:theme="@style/TWOHSwitch"/>
 
-            </LinearLayout>
         </LinearLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="Jumlah Anggota"
-                android:id="@+id/et_anggota_kop"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        // BAGIAN PENGAWAS
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Pengawas"
-            android:textStyle="bold"/>
+            android:orientation="horizontal">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <!-- Capture picture button -->
+            <Button
+                android:id="@+id/btnCapturePicture"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@color/btn_bg"
+                android:onClick="onClick"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Foto  Koperasi"
+                android:textColor="@color/white"
+                tools:ignore="OnClick" />
 
-            <EditText
-                android:hint=" Nama Ketua"
-                android:id="@+id/et_nama_ketua_pengawas_kel"
-                android:inputType="textEmailAddress"
+            <TextView
+                android:id="@+id/image_name"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text=""
+                android:textColor="@color/txt_font" />
 
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint=" Nomor Telepon"
-                android:id="@+id/et_tlp_ketua_pengawas_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="Alamat Ketua"
-                android:id="@+id/et_alamat_ketua_pengawas_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint=" Nama Anggota"
-                android:id="@+id/et_nama_anggota_pengawas_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint=" Nomor Telepon"
-                android:id="@+id/et_tlp_anggota_pengawas_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="Alamat "
-                android:id="@+id/et_alamat_anggota_pengawas_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-    //BAGIAN PENGURUS
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Pengurus"
-            android:textStyle="bold"/>
-
-        // BAGIAN KETUA
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint=" Nama Ketua"
-                android:id="@+id/et_nama_ketua_pengurus_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint=" Nomor Telepon"
-                android:id="@+id/et_tlp_ketua_penguru_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="Alamat Ketua"
-                android:id="@+id/et_alamat_ketua_pengurus_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        // BAGIAN WAKIL KETUA
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="Nama Wakil Ketua"
-                android:id="@+id/et_nama_wakil_pengurus_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="Nomor Telepon"
-                android:id="@+id/et_tlp_wakil_pengurus_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="Alamat "
-                android:id="@+id/et_alamat_wakil_pengurus_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-       // BAGIAN SEKERTARIS
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="Nama Sekertaris"
-                android:id="@+id/et_nama_sekertaris_pengurus_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="Nomor Telepon"
-                android:id="@+id/et_tlp_sekertaris_pengurus_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="Alamat "
-                android:id="@+id/et_alamat_sekertaris_pengurus_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-
-        <!-- Capture picture button -->
-
-        <Button
-            android:id="@+id/btnCapturePicture"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:background="@color/btn_bg"
-            android:onClick="onClick"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="Foto  Koperasi"
-            android:textColor="@color/white"
-            tools:ignore="OnClick" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:gravity="center_horizontal"
-            android:textColor="@color/txt_font" />
-
+        </LinearLayout>
+        </LinearLayout>
 
 
 
@@ -369,6 +181,4 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
-
-
 </android.support.v4.widget.NestedScrollView>
