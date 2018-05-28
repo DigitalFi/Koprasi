@@ -4,9 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -15,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.project.rezasaputra.koprasi.R;
@@ -117,5 +115,15 @@ public class MainKecamatan extends AppCompatActivity
         Intent intent = new Intent(MainKecamatan.this, Login.class);
         startActivity(intent);
         finish();
+    }
+
+    public void notif_kecamatan(View view) {
+        Intent intent = new Intent(MainKecamatan.this, notifikasi_kecamatan.class);
+        startActivity(intent);
+    }
+
+    public void history_kecamatan(View view) {
+        Intent intent = new Intent(MainKecamatan.this, history_data_kecamatan.class);
+        startActivity(intent);
     }
 }

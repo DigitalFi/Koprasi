@@ -96,7 +96,8 @@
                         android:layout_marginLeft="5dp">
 
                         <LinearLayout
-                            android:id="@+id/kelurahan-input"
+                            android:onClick="notif_kecamatan"
+                            android:id="@+id/kecamatan-notifikasi"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
@@ -142,9 +143,11 @@
                         android:layout_marginLeft="5dp">
 
                         <LinearLayout
-                            android:id="@+id/kelurahan-history"
+                            android:onClick="history_kecamatan"
+                            android:id="@+id/kecamatan-history"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            tools:ignore="OnClick">
 
                             <ImageView
                                 android:id="@+id/imageview2"

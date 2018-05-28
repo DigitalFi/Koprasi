@@ -60,199 +60,191 @@
         app:layout_constraintRight_toRightOf="parent">
     </LinearLayout>
 
+    <!--mainmenu-->
     <LinearLayout
         android:background="#eee"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="10dp"
         android:orientation="vertical"
         android:weightSum="3">
-        <!--atas-->
+
+
         <LinearLayout
-            android:id="@+id/atas"
+            android:background="#eee"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:weightSum="2">
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
 
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp">
+            <!--atas-->
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-                    <RelativeLayout
-                        android:id="@+id/input"
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.CardView
+                        android:onClick="notifikasi_pemkod"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/activity_vertical_margin">
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        tools:ignore="OnClick">
 
-                        <ImageView
-                            android:id="@+id/imageview"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginRight="20dp"
-                            android:scaleType="centerCrop"
-                            android:src="@mipmap/ic_notifikasi" />
+                        <LinearLayout
+                            android:id="@+id/kelurahan-input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10dp"
-                            android:textStyle="bold"
-                            android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/imageview"
-                            android:text="Notifikasi" />
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp">
+                            <ImageView
+                                android:id="@+id/imageview"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="20dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/ic_notifikasi" />
 
-                    <RelativeLayout
-                        android:id="@+id/koperasi"
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_gravity="center"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/imageview"
+                                android:text="Notifikasi" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.CardView
+                        android:onClick="daftar_koperasi"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/activity_vertical_margin">
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp">
 
-                        <ImageView
-                            android:id="@+id/imageview1"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginRight="20dp"
-                            android:scaleType="centerCrop"
-                            android:src="@mipmap/ic_menu_history" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10dp"
-                            android:textStyle="bold"
-                            android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/imageview1"
-                            android:text="Daftar Koperasi" />
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-            </RelativeLayout>
-        </LinearLayout>
-        <!--tengah-->
-        <LinearLayout
-            android:id="@+id/tengah"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="2">
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/imageview1"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="20dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/ic_menu_history" />
 
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/imageview1"
+                                android:text="Daftar Koperasi" />
 
-                    <RelativeLayout
-                        android:id="@+id/Histori"
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--tengah-->
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <android.support.v7.widget.CardView
+                        android:onClick="history_pemkod"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/activity_vertical_margin">
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        tools:ignore="OnClick">
 
-                        <ImageView
-                            android:id="@+id/imageview3"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginRight="20dp"
-                            android:scaleType="centerCrop"
-                            android:src="@mipmap/ic_menu_history" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10dp"
-                            android:textStyle="bold"
-                            android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/imageview3"
-                            android:text="Histori Data" />
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp">
+                            <ImageView
+                                android:id="@+id/imageview3"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="20dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/ic_menu_history" />
 
-                    <RelativeLayout
-                        android:id="@+id/data_statistik"
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/imageview3"
+                                android:text="Histori Data" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.CardView
+                        android:onClick="data_statistik"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/activity_vertical_margin">
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        tools:ignore="OnClick">
 
-                        <ImageView
-                            android:id="@+id/imageview4"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_marginRight="20dp"
-                            android:scaleType="centerCrop"
-                            android:src="@mipmap/ic_statistik" />
+                        <LinearLayout
+                            android:id="@+id/kelurahan-history"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10dp"
-                            android:textStyle="bold"
-                            android:layout_centerVertical="true"
-                            android:layout_toEndOf="@+id/imageview4"
-                            android:text="Data Statistik" />
-                    </RelativeLayout>
-                </android.support.v7.widget.CardView>
-            </RelativeLayout>
-        </LinearLayout>
-        <!--bawah-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/darurat"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true"
-                    android:text="Depok Friendly City"/>
-            </RelativeLayout>
+                            <ImageView
+                                android:id="@+id/imageview4"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="20dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/ic_statistik" />
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_weight="1"></RelativeLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/imageview4"
+                                android:text="Data Statistik" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </RelativeLayout>
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 

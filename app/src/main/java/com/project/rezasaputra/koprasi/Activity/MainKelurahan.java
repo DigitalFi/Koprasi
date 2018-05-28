@@ -129,7 +129,7 @@ public class MainKelurahan extends AppCompatActivity
     }
 
     public void history(View view) {
-        Intent intent = new Intent(MainKelurahan.this, MainKelurahan.class);
+        Intent intent = new Intent(MainKelurahan.this, history_data_kelurahan.class);
         startActivity(intent);
     }
 }
