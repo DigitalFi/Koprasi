@@ -17,6 +17,7 @@
 
        <ImageView
             android:id="@+id/ic_kelurahan"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -58,86 +59,113 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
     </LinearLayout>
+
+    <!--mainmenu-->
     <LinearLayout
+        android:background="#eee"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="0dp"
-        android:background="#d4d5d6"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="3">
+
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:background="#eee"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="2">
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
+            <!--atas-->
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp">
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <RelativeLayout
-                    android:id="@+id/input"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp">
-
-              <ImageView
-                        android:id="@+id/imageview"
-                        android:layout_width="50dp"
-
-                        android:layout_height="50dp"
-                        android:layout_marginRight="20dp"
-                        android:padding="5dp"
-                        android:src="@mipmap/ic_notifikasi" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp">
 
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/imageview"
-                        android:text="Notifikasi"
-                        android:textSize="20dp" />
+                        <LinearLayout
+                            android:id="@+id/kelurahan-input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imageview"
+                                android:layout_width="50dp"
+
+                                android:layout_height="50dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="5dp"
+                                android:src="@mipmap/ic_notifikasi" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/imageview"
+                                android:text="Notifikasi"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
+            </LinearLayout>
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
+            <!--tengah-->
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp">
+                android:orientation="horizontal"
+                android:weightSum="1">
 
                 <RelativeLayout
-                    android:id="@+id/approve"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp">
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-                 <ImageView
-                        android:id="@+id/imageview2"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginRight="20dp"
-                        android:padding="5dp"
-                        android:src="@mipmap/ic_menu_history" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp">
 
-                        android:layout_centerVertical="true"
-                        android:layout_toEndOf="@+id/imageview2"
-                        android:text="History Data"
-                        android:textSize="20dp" />
+                        <LinearLayout
+                            android:id="@+id/kelurahan-history"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imageview2"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="5dp"
+                                android:src="@mipmap/ic_menu_history" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_toEndOf="@+id/imageview2"
+                                android:text="History Data"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
                 </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
+            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
