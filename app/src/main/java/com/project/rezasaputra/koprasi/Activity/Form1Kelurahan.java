@@ -64,7 +64,7 @@ public class Form1Kelurahan extends AppCompatActivity {
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
 
-        // ketika login button di klik
+        // ketika submitbutton di click
         simpen.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
