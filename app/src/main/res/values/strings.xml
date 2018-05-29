@@ -132,4 +132,6 @@
     <string name="btnUploadToServer">Upload to Server</string>
     <string name="title_activity_form1_kelurahan2">Form1Kelurahan2</string>
     <string name="title_activity_form1_kelurahan3">Form1Kelurahan3</string>
+    <string name="title_activity_form1_kelurahan4">Form1Kelurahan4</string>
+    <string name="title_activity_form1_kelurahan5">Form1Kelurahan5</string>
 </resources>

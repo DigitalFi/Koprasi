@@ -8,20 +8,20 @@ import android.view.View;
 
 import com.project.rezasaputra.koprasi.R;
 
-public class Form1Kelurahan2 extends AppCompatActivity {
+public class Form1Kelurahan4 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form1_kelurahan2);
+        setContentView(R.layout.activity_form1_kelurahan4);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void next(View view) {
-        Intent intent = new Intent(Form1Kelurahan2.this, Form1Kelurahan3.class);
+        Intent intent = new Intent(Form1Kelurahan4.this, Form1Kelurahan5.class);
         startActivity(intent);
     }
 }

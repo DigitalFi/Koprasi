@@ -127,6 +127,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.rezasaputra.koprasi.Activity.Form1Kelurahan2" />
         </activity>
+        <activity
+            android:name=".Activity.Form1Kelurahan4"
+            android:label="@string/title_activity_form1_kelurahan4"
+            android:parentActivityName=".Activity.Form1Kelurahan3"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rezasaputra.koprasi.Activity.Form1Kelurahan3" />
+        </activity>
+        <activity
+            android:name=".Activity.Form1Kelurahan5"
+            android:label="@string/title_activity_form1_kelurahan5"
+            android:parentActivityName=".Activity.Form1Kelurahan4"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rezasaputra.koprasi.Activity.Form1Kelurahan4" />
+        </activity>
     </application>
 
 </manifest>
