@@ -11,21 +11,12 @@ import java.util.List;
 
 public class notifikasi_kecamatan extends AppCompatActivity {
 
-    private ListView listnya;
-    private String[] isilistnya = new String[] {
-            "Notifikasi Belum Di Approve", "Sudah Di Approve",
-            "Sudah Di Approve", "Notifikasi Belum Di Approve"
-    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifikasi_kecamatan);
 
-        listnya = (ListView) findViewById(R.id.listview);
-        ArrayAdapter<String> adapter;
-        adapter = new ArrayAdapter<String>(notifikasi_kecamatan.this,android.R.layout.simple_list_item_1,
-                android.R.id.text1, (List<String>) listnya);
-        listnya.setAdapter(adapter);
     }
 }
