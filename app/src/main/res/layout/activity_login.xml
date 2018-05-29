@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_apps"
     tools:context="com.project.rezasaputra.koprasi.Activity.Login">
 
   <!-- <android.support.design.widget.AppBarLayout

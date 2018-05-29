@@ -53,22 +53,20 @@
         <activity
             android:name=".Activity.FormKelurahan"
             android:label=""
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:parentActivityName=".Activity.MainKelurahan">
+            android:parentActivityName=".Activity.MainKelurahan"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.project.rezasaputra.koprasi.Activity.MainKelurahan"
-                />
+                android:value="com.project.rezasaputra.koprasi.Activity.MainKelurahan" />
         </activity>
         <activity
             android:name=".Activity.Form1Kelurahan"
             android:label=""
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:parentActivityName=".Activity.FormKelurahan">
+            android:parentActivityName=".Activity.FormKelurahan"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.project.rezasaputra.koprasi.Activity.FormKelurahan"
-                />
+                android:value="com.project.rezasaputra.koprasi.Activity.FormKelurahan" />
         </activity>
         <activity
             android:name=".Activity.Form2Kelurahan"
@@ -109,6 +107,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.rezasaputra.koprasi.Activity.MainKelurahan" />
         </activity>
+        <activity android:name=".Activity.Detail_koperasi"></activity>
     </application>
 
 </manifest>
