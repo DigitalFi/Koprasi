@@ -9,7 +9,7 @@
     android:isScrollContainer="true"
     android:background="@drawable/bg_apps"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.project.rezasaputra.koprasi.Activity.Detail_koperasi">
+    tools:context="com.project.rezasaputra.koprasi.Activity.detail_notif_koperasi">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -123,7 +123,23 @@
 
     </LinearLayout>
 
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/sw_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Approve"
+        android:textColor="#000"
+        android:theme="@style/TWOHSwitch"/>
 
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/submit"
+        android:text="Submit"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
 </LinearLayout>

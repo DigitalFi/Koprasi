@@ -63,7 +63,7 @@
 
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/imageview"
-                android:text=""
+                android:text="Koperasi Azaria Sekolah"
                 android:textSize="20dp" />
 
 
@@ -90,7 +90,7 @@
 
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/imageview2"
-                android:text=""
+                android:text="Koperasi Tunas Grafika"
                 android:textSize="20dp" />
 
         </RelativeLayout>
@@ -116,7 +116,7 @@
 
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/imageview2"
-                android:text=""
+                android:text="Koperasi Prima Husada"
                 android:textSize="20dp" />
 
         </RelativeLayout>
@@ -143,7 +143,7 @@
 
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/imageview2"
-                android:text=""
+                android:text="Koperasi Serba Usaha Kopakem"
                 android:textSize="20dp" />
 
         </RelativeLayout>
@@ -167,7 +167,7 @@
 
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/imageview2"
-                android:text=""
+                android:text="Koperasi Graha Lembayung"
                 android:textSize="20dp" />
 
         </RelativeLayout>
@@ -188,14 +188,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/imageview2"
-                android:text=""
+                android:text="KBMT Salman Alfarisi"
                 android:textSize="20dp" />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>
+
 
 
 

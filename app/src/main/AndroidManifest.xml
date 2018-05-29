@@ -107,7 +107,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.rezasaputra.koprasi.Activity.MainKelurahan" />
         </activity>
-        <activity android:name=".Activity.Detail_koperasi"></activity>
+        <activity android:name=".Activity.Detail_koperasi" />
+        <activity android:name=".Activity.detail_notif_koperasi"></activity>
     </application>
 
 </manifest>
