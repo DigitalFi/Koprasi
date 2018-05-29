@@ -159,4 +159,8 @@ public class FormKelurahan extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void regis(View view) {
+        Intent intent = new Intent(FormKelurahan.this, Form3Kelurahan.class);
+        startActivity(intent);
+    }
 }

@@ -31,7 +31,7 @@ public class Form2Kelurahan3 extends AppCompatActivity {
     }
 
     public void next(View view) {
-        Intent intent = new Intent(Form2Kelurahan3.this, Form2Kelurahan3.class);
+        Intent intent = new Intent(Form2Kelurahan3.this, MainKelurahan.class);
         startActivity(intent);
 
     }
