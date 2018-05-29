@@ -172,8 +172,8 @@
 
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/simpen"
             android:text="Next"
-            android:onClick="next"
             android:layout_gravity="right"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
