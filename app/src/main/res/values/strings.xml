@@ -130,4 +130,6 @@
     <string name="btnRecordVideo">Record Video</string>
     <string name="or">(or)</string>
     <string name="btnUploadToServer">Upload to Server</string>
+    <string name="title_activity_form1_kelurahan2">Form1Kelurahan2</string>
+    <string name="title_activity_form1_kelurahan3">Form1Kelurahan3</string>
 </resources>

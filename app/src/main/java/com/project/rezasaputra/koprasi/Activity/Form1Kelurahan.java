@@ -195,4 +195,8 @@ public class Form1Kelurahan extends AppCompatActivity {
     }
 
 
+    public void next(View view) {
+        Intent intent = new Intent(Form1Kelurahan.this, Form1Kelurahan1.class);
+        startActivity(intent);
+    }
 }

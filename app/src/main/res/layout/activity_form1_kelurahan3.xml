@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     android:background="@drawable/bg_apps"
-    tools:context="com.project.rezasaputra.koprasi.Activity.Form1Kelurahan1">
+    android:fitsSystemWindows="true"
+    tools:context="com.project.rezasaputra.koprasi.Activity.Form1Kelurahan3">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -14,6 +14,6 @@
         android:layout_height="?attr/actionBarSize"
         app:popupTheme="@style/PopupOverlay" />
 
-    <include layout="@layout/content_form1_kelurahan1" />
+    <include layout="@layout/content_form1_kelurahan3" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -10,12 +10,12 @@ import android.view.View;
 
 import com.project.rezasaputra.koprasi.R;
 
-public class Form1Kelurahan1 extends AppCompatActivity {
+public class Form1Kelurahan3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form1_kelurahan1);
+        setContentView(R.layout.activity_form1_kelurahan3);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -27,10 +27,11 @@ public class Form1Kelurahan1 extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void next(View view) {
-        Intent intent = new Intent(Form1Kelurahan1.this, Form1Kelurahan2.class);
+        Intent intent = new Intent(Form1Kelurahan3.this, Form2Kelurahan.class);
         startActivity(intent);
     }
 }
