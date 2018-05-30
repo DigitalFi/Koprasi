@@ -109,7 +109,7 @@
             <EditText
                 android:hint="NPWP"
                 android:id="@+id/et_npwp_kel"
-                android:inputType="number"
+                android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -146,12 +146,10 @@
 
             <!-- Capture picture button -->
             <Button
-                android:id="@+id/btnCapturePicture"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:background="@color/btn_bg"
-                android:onClick="onClick"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="Foto  Koperasi"
@@ -167,19 +165,20 @@
                 android:textColor="@color/txt_font" />
 
         </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/simpen"
+                android:text="Next"
+                android:layout_gravity="right"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="OnClick" />
         </LinearLayout>
 
 
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/simpen"
-            android:text="Next"
-            android:layout_gravity="right"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:ignore="OnClick" />
 
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

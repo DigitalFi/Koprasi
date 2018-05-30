@@ -1,13 +1,9 @@
 package com.project.rezasaputra.koprasi.Activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.support.v7.app.AppCompatActivity;
 
 import com.project.rezasaputra.koprasi.R;
-
-import java.util.List;
 
 public class history_data_kelurahan extends AppCompatActivity {
 

@@ -70,6 +70,7 @@
         android:weightSum="2">
 
         <RelativeLayout
+            android:onClick="notif_kecamatan"
             android:padding="1dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -79,7 +80,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#fff"
-                android:onClick="input"
                 tools:ignore="OnClick">
 
                 <LinearLayout
@@ -101,6 +101,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:onClick="history_kecamatan"
             android:padding="1dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"

@@ -226,7 +226,7 @@
             android:layout_gravity="right"
             android:background="@color/colorPrimary"
             android:onClick="next"
-            android:text="Next"
+            android:text="Submit"
             android:textColor="@android:color/white" />
 
 

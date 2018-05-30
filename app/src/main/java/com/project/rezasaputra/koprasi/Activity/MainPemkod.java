@@ -121,7 +121,7 @@ public class MainPemkod extends AppCompatActivity
     }
 
     public void daftar_koperasi(View view) {
-        Intent intent = new Intent(MainPemkod.this, MainPemkod.class);
+        Intent intent = new Intent(MainPemkod.this, history_data_pemkod.class);
         startActivity(intent);
     }
 

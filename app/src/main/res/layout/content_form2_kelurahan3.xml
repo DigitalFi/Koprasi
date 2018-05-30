@@ -87,7 +87,7 @@
                 <EditText
                     android:hint="Rp."
                     android:id="@+id/jumlah_simpanan_pokok"
-                    android:inputType="textEmailAddress"
+                    android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -120,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Rp."
-                    android:inputType="textEmailAddress" />
+                    android:inputType="number" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -162,7 +162,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/jumlah_simpanan_wajib"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -193,7 +193,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/jumlah_simpanan_wajib1"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -237,7 +237,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/jumlah_simpanan_sukarela"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -268,7 +268,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/jumlah_simpanan_sukarela1"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -312,7 +312,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/jumlah_piutang_usaha"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -343,7 +343,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/jumlah_piutang_usaha1"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -387,7 +387,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/jumlah_hutang"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -418,7 +418,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/jumlah_hutang1"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -462,7 +462,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/cadangan"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -493,7 +493,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/cadangan1"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -537,7 +537,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/shu"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -568,7 +568,7 @@
                     <EditText
                         android:hint="Rp."
                         android:id="@+id/shu1"
-                        android:inputType="textEmailAddress"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -584,7 +584,7 @@
                 <EditText
                     android:hint="Permasalahan yang dihadapi"
                     android:id="@+id/et_form2_alamat_kop"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -597,15 +597,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Foto Kunjungan"
-            android:id="@+id/btnCapturePicture"
             android:layout_gravity="left"
             android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
-            android:onClick="onClick"
-            tools:ignore="OnClick" />
+            android:textColor="@android:color/white" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btnLogin"
             android:text="Next"
             android:onClick="next"
             android:layout_gravity="right"

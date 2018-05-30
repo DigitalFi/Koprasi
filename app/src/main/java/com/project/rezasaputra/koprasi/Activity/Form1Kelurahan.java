@@ -81,7 +81,11 @@ public class Form1Kelurahan extends AppCompatActivity {
                 // ngecek apakah inputannya kosong atau tidak
                 if (!idKop.isEmpty() && !keaktifan.isEmpty() && !rapat.isEmpty() && !jumlah.isEmpty() && !nama.isEmpty()) {
                     // login user
-                    checkUpload(idKop, keaktifan, rapat, jumlah, nama);
+                    //checkUpload(idKop, keaktifan, rapat, jumlah, nama);
+                    Intent intent = new Intent(Form1Kelurahan.this,
+                            Form1Kelurahan1.class);
+                    startActivity(intent);
+                    finish();
                 } else {
                     // jika inputan kosong tampilkan pesan
                     Toast.makeText(getApplicationContext(),

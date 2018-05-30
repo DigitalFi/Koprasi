@@ -63,10 +63,9 @@
 
 
     <TextView
-        android:id="@+id/btnLinkToRegisterScreen"
         android:layout_marginTop="20dp"
-        android:textColor="@color/colorAccent"
-        android:text="Saya Belum Punya Akun? Register"
+        android:textColor="@color/colorPrimary"
+        android:text="Depok Friendly City"
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

@@ -126,4 +126,5 @@ public class MainKecamatan extends AppCompatActivity
         Intent intent = new Intent(MainKecamatan.this, history_data_kecamatan.class);
         startActivity(intent);
     }
+
 }

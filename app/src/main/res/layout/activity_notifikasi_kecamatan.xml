@@ -26,10 +26,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:text="Notifikasi Kecamatan"
+            android:text="Data Koperasi"
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimary"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mohon cek data koperasi secara detail"
+            android:layout_gravity="center"/>
     </FrameLayout>
     <LinearLayout
         android:id="@+id/ticker_area"
@@ -52,6 +63,7 @@
         android:layout_marginLeft="5dp">
 
         <RelativeLayout
+            android:onClick="detil"
             android:id="@+id/input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,112 +107,4 @@
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp">
-
-        <RelativeLayout
-            android:id="@+id/approve4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/imageview2"
-                android:text="Koperasi Prima Husada"
-                android:textSize="20dp" />
-
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp">
-
-        <RelativeLayout
-            android:id="@+id/approve"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/imageview2"
-                android:text="Koperasi Serba Usaha Kopakem"
-                android:textSize="20dp" />
-
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp">
-
-        <RelativeLayout
-            android:id="@+id/approve6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/imageview2"
-                android:text="Koperasi Graha Lembayung"
-                android:textSize="20dp" />
-
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp">
-
-        <RelativeLayout
-            android:id="@+id/approve7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toEndOf="@+id/imageview2"
-                android:text="KBMT Salman Alfarisi"
-                android:textSize="20dp" />
-
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-
-
-
-
-
-
-
 </LinearLayout>

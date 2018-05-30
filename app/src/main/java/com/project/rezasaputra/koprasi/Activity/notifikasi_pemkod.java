@@ -1,13 +1,11 @@
 package com.project.rezasaputra.koprasi.Activity;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.project.rezasaputra.koprasi.R;
-
-import java.util.List;
 
 public class notifikasi_pemkod extends AppCompatActivity {
 
@@ -18,5 +16,10 @@ public class notifikasi_pemkod extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notifikasi_pemkod);
 
+    }
+
+    public void getdtl(View view) {
+        Intent intent = new Intent(notifikasi_pemkod.this, Detail_koperasi.class);
+        startActivity(intent);
     }
 }

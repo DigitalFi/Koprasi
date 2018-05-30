@@ -121,6 +121,35 @@
             android:text="2187926864"
             android:textSize="18dp" />
 
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/btn_bg"
+                android:padding="20dp"
+                android:text="Approved"
+                android:onClick="approve"
+                android:textColor="@color/white"
+                tools:ignore="OnClick" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/btn_bg"
+                android:padding="20dp"
+                android:text="Decline"
+                android:onClick="decline"
+                android:textColor="@color/white"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 

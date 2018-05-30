@@ -118,18 +118,21 @@
 
             </android.support.design.widget.TextInputLayout>
 
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/simpen"
+                android:text="Next"
+                android:layout_gravity="right"
+                android:onClick="next"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
         </LinearLayout>
 
 
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/simpen"
-            android:text="Next"
-            android:layout_gravity="right"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 

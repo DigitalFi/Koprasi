@@ -99,7 +99,7 @@
                 <EditText
                     android:hint="Alamat"
                     android:id="@+id/et_ketua_alamat_kel"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -150,7 +150,7 @@
                 <EditText
                     android:hint="Alamat"
                     android:id="@+id/et_anggota_alamat_kel"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -198,7 +198,7 @@
 
                 <EditText
                     android:hint="Alamat"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -246,7 +246,7 @@
 
                 <EditText
                     android:hint="Alamat"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -294,7 +294,7 @@
 
                 <EditText
                     android:hint="Alamat"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -342,23 +342,23 @@
 
                 <EditText
                     android:hint="Alamat"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </android.support.design.widget.TextInputLayout>
 
-        </LinearLayout>
+            <android.support.v7.widget.AppCompatButton
+                android:text="Next"
+                android:onClick="next"
+                android:layout_gravity="right"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="OnClick" />
 
-        <android.support.v7.widget.AppCompatButton
-            android:text="Next"
-            android:onClick="next"
-            android:layout_gravity="right"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:ignore="OnClick" />
+        </LinearLayout>
 
     </LinearLayout>
 

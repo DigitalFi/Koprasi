@@ -17,9 +17,9 @@
     <application
         android:name=".Activity.helper.AppController"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="SIM POK"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_apps_foreground"
+        android:label="SIM POKJA"
+        android:roundIcon="@mipmap/ic_apps_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".Activity.MainActivity">
@@ -66,48 +66,59 @@
         </activity>
         <activity
             android:name=".Activity.Form2Kelurahan"
-            android:label="POKJA Pembinaan Koperasi"
+            android:label=""
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.Form1Kelurahan1"
-            android:label="Data Usaha dan Keuangan"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:label=""
+            android:parentActivityName=".Activity.Form1Kelurahan"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rezasaputra.koprasi.Activity.Form1Kelurahan" />
+        </activity>
         <activity
             android:name=".Activity.Form2Kelurahan1"
-            android:label="Pekembangan Kelembagaan"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:label=""
+            android:parentActivityName=".Activity.Form2Kelurahan"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rezasaputra.koprasi.Activity.Form2Kelurahan" />
+        </activity>
         <activity
             android:name=".Activity.Form3Kelurahan"
-            android:label="Temuan Koperasi Belum Terdaftar"
+            android:label=""
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.Form2Kelurahan2"
-            android:label="Perkembangan Usaha"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:label=""
+            android:parentActivityName=".Activity.Form2Kelurahan1"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rezasaputra.koprasi.Activity.Form2Kelurahan1" />
+        </activity>
         <activity
             android:name=".Activity.Form2Kelurahan3"
-            android:label="Perkembangan Keuangan"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:label=""
+            android:parentActivityName=".Activity.Form2Kelurahan2"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rezasaputra.koprasi.Activity.Form2Kelurahan2" />
+        </activity>
         <activity android:name=".Activity.notifikasi_pemkod" />
         <activity android:name=".Activity.Daftar_koperasi_pemkod" />
         <activity android:name=".Activity.history_data_pemkod" />
         <activity android:name=".Activity.history_data_kelurahan" />
         <activity android:name=".Activity.notifikasi_kecamatan" />
         <activity android:name=".Activity.history_data_kecamatan" />
-        <activity
-            android:name=".Activity.Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:parentActivityName=".Activity.MainKelurahan"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.project.rezasaputra.koprasi.Activity.MainKelurahan" />
-        </activity>
         <activity android:name=".Activity.Detail_koperasi" />
         <activity android:name=".Activity.detail_notif_koperasi" />
         <activity
             android:name=".Activity.Form1Kelurahan2"
-            android:label="@string/title_activity_form1_kelurahan2"
+            android:label=""
             android:parentActivityName=".Activity.Form1Kelurahan1"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
@@ -116,7 +127,7 @@
         </activity>
         <activity
             android:name=".Activity.Form1Kelurahan3"
-            android:label="@string/title_activity_form1_kelurahan3"
+            android:label=""
             android:parentActivityName=".Activity.Form1Kelurahan2"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
@@ -125,7 +136,7 @@
         </activity>
         <activity
             android:name=".Activity.Form1Kelurahan4"
-            android:label="@string/title_activity_form1_kelurahan4"
+            android:label=""
             android:parentActivityName=".Activity.Form1Kelurahan3"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
@@ -134,7 +145,7 @@
         </activity>
         <activity
             android:name=".Activity.Form1Kelurahan5"
-            android:label="@string/title_activity_form1_kelurahan5"
+            android:label=""
             android:parentActivityName=".Activity.Form1Kelurahan4"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data

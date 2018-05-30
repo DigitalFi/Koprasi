@@ -116,12 +116,10 @@
 
                 <!-- Capture picture button -->
                 <Button
-                    android:id="@+id/btnCapturePicture"
                     android:layout_width="170dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:background="@color/btn_bg"
-                    android:onClick="onClick"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:text="Ambil Foto"
@@ -208,10 +206,7 @@
 
             </android.support.design.widget.TextInputLayout>
 
-
-        </LinearLayout>
-
-        <android.support.v7.widget.AppCompatButton
+            <android.support.v7.widget.AppCompatButton
             android:text="Go To Form 2"
             android:onClick="next"
             android:padding="10dp"
@@ -222,6 +217,9 @@
             android:layout_height="wrap_content"
             tools:ignore="OnClick" />
 
-    </LinearLayout>        android:text="@string/large_text" />
+        </LinearLayout>
 
+
+
+    </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

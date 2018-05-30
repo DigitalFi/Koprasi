@@ -16,7 +16,6 @@ public class Form1Kelurahan4 extends AppCompatActivity {
         setContentView(R.layout.activity_form1_kelurahan4);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
