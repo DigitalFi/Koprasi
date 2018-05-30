@@ -30,10 +30,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.MainMenu"
-            android:label="POKJA"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".Activity.Login"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme" />
