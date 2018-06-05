@@ -135,4 +135,5 @@
     <string name="title_activity_form1_kelurahan4">Form1Kelurahan4</string>
     <string name="title_activity_form1_kelurahan5">Form1Kelurahan5</string>
     <string name="title_activity_form2_history">Form2History</string>
+    <string name="title_activity_approval__kecamatan">Approval_Kecamatan</string>
 </resources>

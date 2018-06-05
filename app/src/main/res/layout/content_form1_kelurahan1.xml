@@ -57,52 +57,40 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Keaktifan Koperasi"
-                    android:textSize="15dp"
-                    android:textStyle="bold"/>
-
-                <android.support.v7.widget.SwitchCompat
-                    android:id="@+id/sw_button1"
+                <Switch
+                    android:padding="10dp"
+                    android:id="@+id/simpleSwitch1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:text="Aktif/Tidak "
-                    android:textColor="#000"
-                    android:theme="@style/TWOHSwitch"/>
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:checked="false"
+                    android:text="Keaktifan Koperasi"
+                    android:textOff="Off"
+                    android:textOn="AKTIF" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rapat Anggota"
-                    android:textSize="15dp"
-                    android:textStyle="bold"/>
-
-                <android.support.v7.widget.SwitchCompat
-                    android:id="@+id/sw_button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:text="Aktif/Tidak "
-                    android:textColor="#000"
-                    android:theme="@style/TWOHSwitch"/>
+                <Switch
+                    android:padding="10dp"
+                    android:id="@+id/simpleSwitch2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:checked="false"
+                    android:layout_gravity="left"
+                    android:text="Rapat Keanggotaan"
+                    android:textOff="Off"
+                    android:textOn="AKTIF" />
 
             </LinearLayout>
-
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
@@ -119,10 +107,9 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatButton
-                android:id="@+id/simpen"
+                android:id="@+id/btnNext"
                 android:text="Next"
                 android:layout_gravity="right"
-                android:onClick="next"
                 android:background="@color/colorPrimary"
                 android:textColor="@android:color/white"
                 android:layout_width="wrap_content"

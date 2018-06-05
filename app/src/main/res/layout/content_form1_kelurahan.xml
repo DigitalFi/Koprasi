@@ -55,35 +55,35 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="Nomor Telepon / Fax"
-                android:id="@+id/et_tlp_kel"
-                android:inputType="number"
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
 
-        </android.support.design.widget.TextInputLayout>
+                <EditText
+                    android:hint="Tlp/Fax"
+                    android:id="@+id/et_tlp_kel"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            </android.support.design.widget.TextInputLayout>
 
-            <EditText
-                android:hint="Website"
-                android:id="@+id/et_website_kel"
-                android:inputType="text"
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
 
-        </android.support.design.widget.TextInputLayout>
+                <EditText
+                    android:hint="website"
+                    android:id="@+id/et_website_kel"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_marginTop="8dp"
@@ -139,6 +139,13 @@
 
         </LinearLayout>
 
+                <ImageView
+                    android:padding="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ImageView"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -146,6 +153,7 @@
 
             <!-- Capture picture button -->
             <Button
+                android:id="@+id/btnCapture"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -153,8 +161,7 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="Foto  Koperasi"
-                android:textColor="@color/white"
-                tools:ignore="OnClick" />
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/image_name"
@@ -165,7 +172,6 @@
                 android:textColor="@color/txt_font" />
 
         </LinearLayout>
-
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/simpen"
                 android:text="Next"
@@ -176,9 +182,5 @@
                 android:layout_height="wrap_content"
                 tools:ignore="OnClick" />
         </LinearLayout>
-
-
-
-
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

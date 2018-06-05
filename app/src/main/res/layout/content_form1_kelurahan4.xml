@@ -60,35 +60,14 @@
                 android:text="Bidang Usaha"
                 android:textStyle="bold"/>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-                <EditText
-                    android:hint="Usaha 1"
-                    android:id="@+id/et_ketua_nama_kel"
-                    android:inputType="text"
+                <Spinner
+                    android:id="@+id/bidangusaha"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:hint="Usaha 2"
-                    android:id="@+id/et_ketua_tlp_kel"
-                    android:inputType="text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_height="40dp" />
+            </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="8dp"
@@ -97,21 +76,7 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:hint="Usaha 3"
-                    android:id="@+id/et_ketua_alamat_kel"
-                    android:inputType="text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
+                    android:id="@+id/et_data_alamat_usaha"
                     android:hint="Alamat Tempat Usaha"
                     android:inputType="text"
                     android:layout_width="match_parent"
@@ -120,6 +85,62 @@
             </android.support.design.widget.TextInputLayout>
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <Switch
+                    android:padding="10dp"
+                    android:id="@+id/simpleSwitch1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:checked="false"
+                    android:text="Status Usaha"
+                    android:textOff="TIDAK AKTIF"
+                    android:textOn="AKTIF" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foto Tempat Usaha"/>
+
+            <ImageView
+                android:id="@+id/ImageView"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <!-- Capture picture button -->
+                <Button
+                    android:id="@+id/btnCapture"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/btn_bg"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="Ambil Foto"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/image_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text=""
+                    android:textColor="@color/txt_font" />
+
+            </LinearLayout>
+
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
@@ -127,7 +148,83 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:hint="Status Tempat Usaha"
+                    android:id="@+id/et_data_omzet"
+                    android:hint="Omzet"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_data_simpanan_usaha"
+                    android:hint="Simpanan Pokok"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_data_jumlah_simpanan_usaha"
+                    android:hint="Jumlah Simpanan Pokok"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_data_simpanan_wajib_usaha"
+                    android:hint="Simpanan Wajib"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_data_jumlah_simpanan_wajib_usaha"
+                    android:hint="Jumlah Simpanan Wajib"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_data_shu_tahunan"
+                    android:hint="SHU Tahunan Berjalan"
                     android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -136,17 +233,13 @@
 
             <android.support.v7.widget.AppCompatButton
                 android:text="Next"
-                android:onClick="next"
+                android:id="@+id/btnNext"
                 android:layout_gravity="right"
                 android:background="@color/colorPrimary"
                 android:textColor="@android:color/white"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:ignore="OnClick" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
-
-
-
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

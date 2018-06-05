@@ -118,7 +118,7 @@ public class MainKecamatan extends AppCompatActivity
     }
 
     public void notif_kecamatan(View view) {
-        Intent intent = new Intent(MainKecamatan.this, notifikasi_kecamatan.class);
+        Intent intent = new Intent(MainKecamatan.this, Approval_Kecamatan.class);
         startActivity(intent);
     }
 

@@ -36,6 +36,7 @@ import java.util.Map;
 public class FormKelurahan extends AppCompatActivity {
     private static final String TAG = Login.class.getSimpleName();
     SharedPreferences pref;
+    SharedPreferences id_kop;
     Spinner spinner;
     String URL = "https://koperasi.digitalfatih.com/apigw/koperasi/getkoperasibyid/";
     @Override
@@ -138,6 +139,7 @@ public class FormKelurahan extends AppCompatActivity {
         stringRequest.setRetryPolicy(policy);
         requestQueue.add(stringRequest);
     }
+
     /*This function is for contekan*/
     private void setDataKoperasi() {
         ArrayList<koperasi_profile> koperasiList = new ArrayList<>();
