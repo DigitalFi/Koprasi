@@ -115,7 +115,6 @@
         <activity android:name=".Activity.Daftar_koperasi_pemkod" />
         <activity android:name=".Activity.history_data_pemkod" />
         <activity android:name=".Activity.history_data_kelurahan" />
-        <activity android:name=".Activity.notifikasi_kecamatan" />
         <activity android:name=".Activity.history_data_kecamatan" />
         <activity android:name=".Activity.Detail_koperasi" />
         <activity android:name=".Activity.detail_notif_koperasi" />
@@ -169,6 +168,14 @@
         <activity
             android:name=".Activity.Approval_Kecamatan"
             android:label="@string/title_activity_approval__kecamatan"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.Approval_Dtl_Kecamatan"
+            android:label="@string/title_activity_approval__dtl__kecamatan"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.ListKelembagaan"
+            android:label="@string/title_activity_list_kelembagaan"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 

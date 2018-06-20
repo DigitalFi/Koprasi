@@ -65,8 +65,8 @@ public class Approval_Kecamatan extends AppCompatActivity {
         progressDialog.show();
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(AppConfig.URL_GET_DATA_APPROVAL, new Response.Listener<JSONArray>(){
-            @Override
-            public void onResponse(JSONArray response) {
+                @Override
+                public void onResponse(JSONArray response) {
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         JSONObject jsonObject = response.getJSONObject(i);
@@ -74,6 +74,8 @@ public class Approval_Kecamatan extends AppCompatActivity {
                         Koperasi koperasi = new Koperasi();
                         koperasi.setNama(jsonObject.getString("nm_koperasi"));
                         koperasi.setNoBadan(jsonObject.getString("no_badan_hukum"));
+                        koperasi.setIdKop(jsonObject.getString("id_koperasi"));
+                        koperasi.setIdKel(jsonObject.getString("id_kelembagaan"));
 
                         kopList.add(koperasi);
                     } catch (JSONException e) {
