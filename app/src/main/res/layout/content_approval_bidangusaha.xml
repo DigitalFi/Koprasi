@@ -72,13 +72,13 @@
             android:theme="@style/TWOHSwitch"/>
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btnNext"
+            android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginRight="20dp"
             android:background="@color/colorPrimary"
-            android:text="Next"
+            android:text="Submit"
             android:textColor="@android:color/white" />
 
     </LinearLayout>
