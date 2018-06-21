@@ -151,4 +151,18 @@ public class MainKecamatan extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void Approval_Kelembagaan (View view) {
+        Intent intent = new Intent(MainKecamatan.this, Approval_Kelembagaan.class);
+        startActivity(intent);
+    }
+
+    public void Approval_Pengurus (View view) {
+        Intent intent = new Intent(MainKecamatan.this, Approval_Pengurus.class);
+        startActivity(intent);
+    }
+    public void Approval_BidangUsaha (View view) {
+        Intent intent = new Intent(MainKecamatan.this, Approval_BidangUsaha.class);
+        startActivity(intent);
+    }
+
 }

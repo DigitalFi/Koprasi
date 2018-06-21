@@ -11,13 +11,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:elevation="50dp">
+        android:elevation="50dp"
+        android:orientation="vertical">
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:padding="10dp">
+
         </FrameLayout>
 
         <FrameLayout
@@ -30,10 +31,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="List Koperasi"
+                android:text="Approval Kecamatan"
+                android:textColor="@color/colorPrimary"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/colorPrimary"/>
+                android:textStyle="bold" />
         </FrameLayout>
 
         <FrameLayout
@@ -43,24 +44,95 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dibawah ini data koperasi yang baru masuk"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:text="Dibawah ini data koperasi yang baru masuk" />
 
         </FrameLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/main_list"
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </android.support.v7.widget.RecyclerView>
+            <Button
+                android:id="@+id/btnCapture"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginRight="50dp"
+                android:background="@color/btn_bg"
+                android:onClick="Approval_Kelembagaan"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Approval Kelembagaan"
+                android:textColor="@color/white"
+                tools:ignore="OnClick" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/image_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text=""
+                android:textColor="@color/txt_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnCapture2"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginRight="50dp"
+                android:background="@color/btn_bg"
+                android:onClick="Approval_Pengurus"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Approval Pengurus"
+                android:textColor="@color/white"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/image_name2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text=""
+                android:textColor="@color/txt_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnCapture3"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginRight="50dp"
+                android:background="@color/btn_bg"
+                android:onClick="Approval_BidangUsaha"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Approval Bidang Usaha"
+                android:textColor="@color/white"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/image_name3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text=""
+                android:textColor="@color/txt_font" />
+        </LinearLayout>
 
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
+

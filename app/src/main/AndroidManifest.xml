@@ -169,14 +169,9 @@
             android:name=".Activity.Approval_Kecamatan"
             android:label="@string/title_activity_approval__kecamatan"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".Activity.Approval_Dtl_Kecamatan"
-            android:label="@string/title_activity_approval__dtl__kecamatan"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".Activity.ListKelembagaan"
-            android:label="@string/title_activity_list_kelembagaan"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".Activity.Approval_Kelembagaan" />
+        <activity android:name=".Activity.Approval_Pengurus" />
+        <activity android:name=".Activity.Approval_BidangUsaha"></activity>
     </application>
 
 </manifest>
