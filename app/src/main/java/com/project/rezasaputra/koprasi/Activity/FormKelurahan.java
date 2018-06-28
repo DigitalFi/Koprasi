@@ -46,6 +46,7 @@ public class FormKelurahan extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         spinner=(Spinner)findViewById(R.id.namakoprasi);
 
         pref = getSharedPreferences("data", Context.MODE_PRIVATE);
@@ -100,7 +101,6 @@ public class FormKelurahan extends AppCompatActivity {
 
     private void loadSpinnerData(final String kecamatan, final String kelurahan) {
         RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
-
             StringRequest stringRequest=new StringRequest(Request.Method.POST, AppConfig.URL_KOPRASI, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -157,7 +157,7 @@ public class FormKelurahan extends AppCompatActivity {
     }
 
     public void search(View view) {
-        Intent intent = new Intent(FormKelurahan.this, Form1Kelurahan.class);
+        Intent intent = new Intent(FormKelurahan.this, Form1Kelurahan2.class);
         startActivity(intent);
     }
 

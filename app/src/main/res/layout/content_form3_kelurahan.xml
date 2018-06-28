@@ -49,24 +49,6 @@
 
         </FrameLayout>
 
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
-
-
-            <EditText
-                android:id="@+id/et_form2_tgl_kop"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Hari / Tanggal Temuan"
-                android:inputType="text" />
-
-
-        </android.support.design.widget.TextInputLayout>
-
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -74,7 +56,7 @@
             android:layout_marginTop="8dp">
 
             <EditText
-                android:id="@+id/et_form2_nama_kop"
+                android:id="@+id/et_nmkop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Koperasi"
@@ -89,10 +71,10 @@
             android:layout_marginTop="8dp">
 
             <EditText
-                android:id="@+id/et_form2_nobdn_kop"
+                android:id="@+id/et_nobdn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nomor dan Tanggal Badan Hukum"
+                android:hint="Nomor Badan Hukum"
                 android:inputType="textEmailAddress" />
 
         </android.support.design.widget.TextInputLayout>
@@ -104,7 +86,22 @@
             android:layout_marginTop="8dp">
 
             <EditText
-                android:id="@+id/et_form2_alamat_kop"
+                android:id="@+id/et_tgbdn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tanggal Badan Hukum"
+                android:inputType="textEmailAddress" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/et_alamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Alamat"
@@ -112,35 +109,37 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Status"
+            android:textStyle="bold"
+            />
 
-            <EditText
-                android:id="@+id/et_form2_status_kop"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:id="@+id/sp_status"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Kantor Pusat / Cabang /  Kas"
-                android:inputType="textEmailAddress" />
+                android:layout_height="40dp" />
+        </LinearLayout>
 
-        </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Kegiatan Usaha"
+            android:textStyle="bold"
+            />
 
-        <android.support.design.widget.TextInputLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
-
-            <EditText
-                android:id="@+id/et_form2_usaha_kop"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:id="@+id/sp_kgusaha"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Kegiatan Usaha"
-                android:inputType="textEmailAddress" />
-
-        </android.support.design.widget.TextInputLayout>
+                android:layout_height="40dp" />
+        </LinearLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -149,7 +148,7 @@
             android:layout_marginTop="8dp">
 
             <EditText
-                android:id="@+id/et_form2_namapengelola_kop"
+                android:id="@+id/et_nmpngl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Pengelola"
@@ -164,7 +163,7 @@
             android:layout_marginTop="8dp">
 
             <EditText
-                android:id="@+id/et_form2_telp_kop"
+                android:id="@+id/et_tlp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="No.Telp"
@@ -179,7 +178,7 @@
             android:layout_marginTop="8dp">
 
             <EditText
-                android:id="@+id/et_form2_anggota_kop"
+                android:id="@+id/et_jmlag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Jumlah Anggota"
@@ -194,7 +193,7 @@
             android:layout_marginTop="8dp">
 
             <EditText
-                android:id="@+id/et_form2_sebararan_kop"
+                android:id="@+id/et_sbag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Sebaran Anggota"
@@ -209,7 +208,7 @@
             android:layout_marginTop="8dp">
 
             <EditText
-                android:id="@+id/et_form2_ijin_kop"
+                android:id="@+id/et_perijinan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Perijinan"
@@ -220,12 +219,11 @@
 
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="@color/colorPrimary"
-            android:onClick="next"
             android:text="Submit"
             android:textColor="@android:color/white" />
 

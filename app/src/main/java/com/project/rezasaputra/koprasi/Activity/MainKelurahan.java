@@ -1,7 +1,6 @@
 package com.project.rezasaputra.koprasi.Activity;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,7 +8,6 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -111,39 +109,18 @@ public class MainKelurahan extends AppCompatActivity
     }
 
     public void logoutUser() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(false);
-        builder.setMessage("Do you want to Exit?");
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //jika user klik yes harusnya ke halaman login
-                SharedPreferences pref = getSharedPreferences("data", MODE_PRIVATE);
-                SharedPreferences.Editor editor = pref.edit();
-                editor.putString("name","");
-                editor.putString("roles","");
-                editor.putInt("login",0);
-                editor.clear();
-                editor.commit();
-                Intent intent = new Intent(MainKelurahan.this, Login.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //jika klik user klik no ya gak terjadi apa-apa
-                dialog.cancel();
-            }
-        });
-        AlertDialog alert = builder.create();
-        alert.show();
+        SharedPreferences pref = getSharedPreferences("data", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString("name","");
+        editor.putString("roles","");
+        editor.putInt("login",0);
+        editor.clear();
+        editor.commit();
 
         // pergi ke login activity
-       // Intent intent = new Intent(MainKelurahan.this, Login.class);
-        //startActivity(intent);
-        //finish();
+        Intent intent = new Intent(MainKelurahan.this, Login.class);
+        startActivity(intent);
+        finish();
     }
 
 

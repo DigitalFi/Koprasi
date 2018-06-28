@@ -35,6 +35,7 @@ import java.util.Map;
  */
 public class Login extends Activity {
     private static final String TAG = Login.class.getSimpleName();
+
     private Button btnLogin;
     private TextView btnLinkToRegister,skip,reset;
     private EditText inputEmail;
