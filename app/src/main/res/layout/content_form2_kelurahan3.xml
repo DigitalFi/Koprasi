@@ -8,13 +8,11 @@
     tools:context="com.project.rezasaputra.koprasi.Activity.Form2Kelurahan3"
     tools:showIn="@layout/activity_form2_kelurahan3">
 
-    //BAGIAN JUMLAH SIMPANAN POKOK
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:elevation="50dp"
-        android:padding="25dp">
+        android:elevation="50dp">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -32,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="Perkembangan Keuangan"
+                android:text="Legalitas"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"/>
@@ -50,531 +48,56 @@
 
         </FrameLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jumlah Simpanan Pokok"
-        android:paddingTop="20dp"
-        android:textStyle="bold"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:weightSum="2"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:elevation="20dp">
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_gravity="center"
-            android:elevation="20dp"
-            android:padding="5dp">
+            android:padding="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Data Awal" />
+                android:text="Legalitas terbaru"
+                android:textStyle="bold"/>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/legal_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="legalitas 1"
+                android:padding="10dp"/>
 
-                <EditText
-                    android:hint="Rp."
-                    android:id="@+id/jumlah_simpanan_pokok"
-                    android:inputType="number"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/legal_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="legalitas 2"
+                android:padding="10dp"/>
 
-            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:id="@+id/legal_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="legalitas 3"
+                android:padding="10dp"/>
 
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:elevation="20dp"
-            android:padding="5dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bulan Berjalan"/>
+                android:text="Jenis Legalitas"
+                android:textStyle="bold"
+                android:paddingTop="10dp"/>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_width="150dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/jumlah_simpanan_pokok1"
+                <Spinner
+                    android:id="@+id/legalitas"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Rp."
-                    android:inputType="number" />
-
-            </android.support.design.widget.TextInputLayout>
-
-        </LinearLayout>
-    </LinearLayout>
-//BAGIAN SIMPANAN WAJIB
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jumlah Simpanan Wajib"
-            android:textStyle="bold"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:elevation="20dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Data Awal"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/jumlah_simpanan_wajib"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
+                    android:layout_height="40dp" />
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bulan Berjalan"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/jumlah_simpanan_wajib1"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-        </LinearLayout>
-//BAGIAN JUMLAH SIMPANAN SUKARELA
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Jumlah Simpanan Sukarela"
-            android:textStyle="bold"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:elevation="20dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Data Awal"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/jumlah_simpanan_sukarela"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bulan Berjalan"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/jumlah_simpanan_sukarela1"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-        </LinearLayout>
-//BAGIAN PIUTANG USAHA
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Piutang Usaha"
-            android:textStyle="bold"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:elevation="20dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Data Awal"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/jumlah_piutang_usaha"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bulan Berjalan"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/jumlah_piutang_usaha1"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-        </LinearLayout>
-//BAGIAN HUTANG USAHA
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hutang Usaha"
-            android:textStyle="bold"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:elevation="20dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Data Awal"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/jumlah_hutang"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bulan Berjalan"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/jumlah_hutang1"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-        </LinearLayout>
-// BAGIAN CADANGAN
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cadangan"
-            android:textStyle="bold"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:elevation="20dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Data Awal"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/cadangan"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bulan Berjalan"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/cadangan1"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-        </LinearLayout>
-//BAGIAN SHU
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SHU"
-            android:textStyle="bold"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:elevation="20dp">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Data Awal"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/shu"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:elevation="20dp"
-                android:padding="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bulan Berjalan"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
-
-                    <EditText
-                        android:hint="Rp."
-                        android:id="@+id/shu1"
-                        android:inputType="number"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </android.support.design.widget.TextInputLayout>
-
-            </LinearLayout>
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
@@ -582,35 +105,115 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:hint="Permasalahan yang dihadapi"
-                    android:id="@+id/et_form2_alamat_kop"
+                    android:hint="Nomor"
+                    android:id="@+id/et_nomor_badan"
                     android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </android.support.design.widget.TextInputLayout>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Nomor"
+                android:textStyle="bold"
+                android:paddingTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_gravity="left"
+                android:elevation="20dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:elevation="20dp"
+                    android:padding="5dp">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btnDatepicker"
+                        android:text="Pilih Tanggal"
+                        android:paddingHorizontal="15dp"
+                        android:layout_gravity="right"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@android:color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:elevation="20dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/date_show"
+                        android:padding="10dp"
+                        android:textSize="20dp"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btnAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="Tambah Legalitas"
+                        android:textColor="@android:color/white"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btnNext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="Next"
+                        android:textColor="@android:color/white" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
         </LinearLayout>
-//
-        <!-- Capture picture button -->
-        <android.support.v7.widget.AppCompatButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Foto Kunjungan"
-            android:layout_gravity="left"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white" />
 
-        <android.support.v7.widget.AppCompatButton
-            android:text="Next"
-            android:onClick="next"
-            android:layout_gravity="right"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        //
     </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>

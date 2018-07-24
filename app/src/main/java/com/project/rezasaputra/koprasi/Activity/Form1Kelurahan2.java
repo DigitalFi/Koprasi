@@ -1,6 +1,7 @@
 package com.project.rezasaputra.koprasi.Activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -45,14 +48,18 @@ public class Form1Kelurahan2 extends AppCompatActivity {
     private SharedPreferences idkop;
     private SharedPreferences pref_idKelembagaan;
     private SharedPreferences idJabatan;
+    private SharedPreferences status;
     private EditText inputNama;
     private EditText inputTlp;
     private EditText inputAlamat;
+    private TextView namaKop;
+    Switch simpleSwitch1;
     Button btnNext;
+    Button btnAdd;
     private ProgressDialog pDialog;
 
     Spinner spinner;
-    String URL="https://koperasi.digitalfatih.com/apigw/reff/jabatan";
+    String URL="https://koperasidev.gobisnis.online/apigw/reff/jabatan";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +71,8 @@ public class Form1Kelurahan2 extends AppCompatActivity {
 
         spinner=(Spinner)findViewById(R.id.jabatanpengawas);
 
+
+        status = getSharedPreferences("st", MODE_PRIVATE);
         pref_idKelembagaan = getSharedPreferences("data", MODE_PRIVATE);
         idJabatan = getSharedPreferences("dataJabatan", MODE_PRIVATE);
 
@@ -75,6 +84,24 @@ public class Form1Kelurahan2 extends AppCompatActivity {
         inputTlp = (EditText) findViewById(R.id.et_pengawas_tlp_kel);
         inputAlamat = (EditText) findViewById(R.id.et_pengawas_alamat_kel);
         btnNext = (Button) findViewById(R.id.btnNext);
+        btnAdd = (Button) findViewById(R.id.btnAdd);
+        simpleSwitch1 = (Switch) findViewById(R.id.jenis_klm);
+        namaKop = (TextView) findViewById(R.id.nama_koperasi);
+
+        //ambil data dari pref
+        idkop = getSharedPreferences("koperasi", MODE_PRIVATE);
+        final String nama = idkop.getString("nama", "");
+        //deklarasikan text view
+        TextView namakoptxt = (TextView) findViewById(R.id.nama_koperasi);
+        //ambil data ke text view
+        namakoptxt.setText(nama);
+
+        final String jenisKlm;
+        if (simpleSwitch1.isChecked())
+            jenisKlm = simpleSwitch1.getTextOn().toString();
+        else
+            jenisKlm = simpleSwitch1.getTextOff().toString();
+
 
         loadSpinnerData(URL);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -82,11 +109,11 @@ public class Form1Kelurahan2 extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 jabatan_profile jabatan = (jabatan_profile) adapterView.getSelectedItem();
                 final SharedPreferences idJabatan = getApplicationContext().getSharedPreferences("koperasi", 0);// 0 - for private mode
-                SharedPreferences.Editor editor = idJabatan.edit();
+                final SharedPreferences.Editor editor = idJabatan.edit();
                 editor.putString("id_jabatan", jabatan.getId());
                 editor.commit();
 
-                Toast.makeText(Form1Kelurahan2.this, "Id Jabatan: "+idJabatan.getString("id_jabatan", null)+",  Nama Koperasi : "+jabatan.getName(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Form1Kelurahan2.this, "Id Jabatan: "+idJabatan.getString("id_jabatan", null)+",  Nama Koperasi : "+jabatan.getName(), Toast.LENGTH_SHORT).show();
 
                 //fungsi buton btnNext
                 btnNext.setOnClickListener(new View.OnClickListener() {
@@ -103,23 +130,61 @@ public class Form1Kelurahan2 extends AppCompatActivity {
                         String alamat = inputAlamat.getText().toString().trim();
 
 
-                        // ngecek apakah inputannya kosong atau tidak
-                        if (!idKop.isEmpty() && !idKelembagaan.isEmpty() && !id_jabatan.isEmpty() &&  !nama.isEmpty() && !tlp.isEmpty() && !alamat.isEmpty()){
+                        //memberikan status
+                        SharedPreferences.Editor editor = status.edit();
+                        editor.putInt("status", 2);
+                        editor.commit();
+
+                        // ngecek apakah inputannya kosong atau Tidak
+                        if (!jenisKlm.isEmpty() && !idKop.isEmpty() && !idKelembagaan.isEmpty() && !id_jabatan.isEmpty() &&  !nama.isEmpty() && !tlp.isEmpty() && !alamat.isEmpty()){
                             // login user
-                            checkUpload(idKop, idKelembagaan, id_jabatan, nama, tlp, alamat);
+                            checkUpload(jenisKlm, idKop, idKelembagaan, id_jabatan, nama, tlp, alamat);
                             //Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "Switch1 :" + keaktifan + "\n" + "Switch2 :" + rapat + "\n" +  "jumlah :" + jumlah, Toast.LENGTH_LONG).show(); // display the current state for switch's
                         } else {
                             // jika inputan kosong tampilkan pesan
-                            Toast.makeText(getApplicationContext(),
-                                    "harap isi dengan benar", Toast.LENGTH_LONG)
-                                    .show();
-                            //Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "kelembagaan :" + idKelembagaan + "\n" + "jabatan :" + id_jabatan + "\n" +  "nama :" + nama + "\n" +  "tlp :" + tlp + "\n" +  "alamat :" + alamat, Toast.LENGTH_LONG).show(); // display the current state for switch's
+                            //Toast.makeText(getApplicationContext(), "harap isi dengan benar", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "kelembagaan :" + idKelembagaan + "\n" + "jabatan :" + id_jabatan + "\n" +  "nama :" + nama + "\n" +  "tlp :" + tlp + "\n" +  "alamat :" + alamat, Toast.LENGTH_LONG).show(); // display the current state for switch's
 
                         }
 
                     }
                 });
 
+                //fungsi buton btnNext
+                btnAdd.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        idkop = getSharedPreferences("koperasi", MODE_PRIVATE);
+                        final String idKop = idkop.getString("id_kop", "");
+                        pref_idKelembagaan = getSharedPreferences("data", MODE_PRIVATE);
+                        final String idKelembagaan = pref_idKelembagaan.getString("id_kelembagaan","");
+                        final String id_jabatan = idJabatan.getString("id_jabatan","");
+                        String nama = inputNama.getText().toString().trim();
+                        String tlp = inputTlp.getText().toString().trim();
+                        String alamat = inputAlamat.getText().toString().trim();
+
+
+                        //memberikan status
+                        SharedPreferences.Editor editor = status.edit();
+                        editor.putInt("status", 1);
+                        editor.commit();
+
+
+                        // ngecek apakah inputannya kosong atau Tidak
+                        if (!jenisKlm.isEmpty() && !idKop.isEmpty() && !idKelembagaan.isEmpty() && !id_jabatan.isEmpty() &&  !nama.isEmpty() && !tlp.isEmpty() && !alamat.isEmpty()){
+                            // login user
+                            checkUpload(jenisKlm, idKop, idKelembagaan, id_jabatan, nama, tlp, alamat);
+                            //Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "Switch1 :" + keaktifan + "\n" + "Switch2 :" + rapat + "\n" +  "jumlah :" + jumlah, Toast.LENGTH_LONG).show(); // display the current state for switch's
+                        } else {
+                            // jika inputan kosong tampilkan pesan
+                            //Toast.makeText(getApplicationContext(), "harap isi dengan benar", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "kelembagaan :" + idKelembagaan + "\n" + "jabatan :" + id_jabatan + "\n" +  "nama :" + nama + "\n" +  "tlp :" + tlp + "\n" +  "alamat :" + alamat, Toast.LENGTH_LONG).show(); // display the current state for switch's
+
+                        }
+
+                    }
+                });
             }
 
             @Override
@@ -128,12 +193,9 @@ public class Form1Kelurahan2 extends AppCompatActivity {
             }
         });
 
-
-
-
     }
 
-    private void checkUpload(final String idKop, final String idKelembagaan, final String id_jabatan, final String nama, final String tlp, final String alamat) {
+    private void checkUpload(final String jenisKlm, final String idKop, final String idKelembagaan, final String id_jabatan, final String nama, final String tlp, final String alamat) {
         // Tag biasanya digunakan ketika ingin membatalkan request volley
         String tag_string_req = "req_login";
         pDialog.setMessage("Loading ...");
@@ -170,10 +232,30 @@ public class Form1Kelurahan2 extends AppCompatActivity {
                         Integer roles_id = jObj.getInt("create_by");*/
 
                         //jika sudah masuk ke mainactivity
-                        Intent intent = new Intent(Form1Kelurahan2.this,
-                                Form1Kelurahan3.class);
-                        startActivity(intent);
+                        status = getSharedPreferences("st", Context.MODE_PRIVATE);
+                        final int stat = status.getInt("status", 0);
+
+                        if (stat == 1) {
+
+                            inputNama.setText("");
+                            inputAlamat.setText("");
+                            inputTlp.setText("");
+
+                            Toast.makeText(getApplicationContext(),
+                                    "Data Sudah Di tambahkan , silahkan isi kembali untuk menambahkan", Toast.LENGTH_LONG)
+                                    .show();
+
+                            Intent intent = new Intent(Form1Kelurahan2.this,
+                                    Form1Kelurahan2.class);
+                            startActivity(intent);
+
+                        }else if(stat == 2){
+                            Intent intent = new Intent(Form1Kelurahan2.this,
+                                    Form1Kelurahan3.class);
+                            startActivity(intent);
+                        }
                         finish();
+
                     } else {
                         //terjadi error dan tampilkan pesan error dari API
                         Toast.makeText(getApplicationContext(), "Terjadi Kesalahan", Toast.LENGTH_LONG).show();
@@ -207,6 +289,7 @@ public class Form1Kelurahan2 extends AppCompatActivity {
                 params.put("nm_anggota", nama);
                 params.put("no_tlp", tlp);
                 params.put("alamat", alamat);
+                params.put("jen_kel", jenisKlm);
 
                 return params;
             }

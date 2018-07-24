@@ -38,7 +38,7 @@ public class FormKelurahan extends AppCompatActivity {
     SharedPreferences pref;
     SharedPreferences id_kop;
     Spinner spinner;
-    String URL = "https://koperasi.digitalfatih.com/apigw/koperasi/getkoperasibyid/";
+    String URL = "https://koperasidev.gobisnis.online/apigw/koperasi/getkoperasibyid/";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -132,8 +132,7 @@ public class FormKelurahan extends AppCompatActivity {
             params.put("id_kecamatan", kecamatan);
             params.put("id_kelurahan", kelurahan);
             return params;
-        }
-        };
+        }};
         int socketTimeout = 30000;
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         stringRequest.setRetryPolicy(policy);
@@ -157,7 +156,7 @@ public class FormKelurahan extends AppCompatActivity {
     }
 
     public void search(View view) {
-        Intent intent = new Intent(FormKelurahan.this, Form1Kelurahan2.class);
+        Intent intent = new Intent(FormKelurahan.this, Form1Kelurahan.class);
         startActivity(intent);
     }
 

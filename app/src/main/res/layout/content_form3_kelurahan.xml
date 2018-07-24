@@ -125,21 +125,21 @@
                 android:layout_height="40dp" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Kegiatan Usaha"
-            android:textStyle="bold"
-            />
 
-        <LinearLayout
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Spinner
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
                 android:id="@+id/sp_kgusaha"
                 android:layout_width="match_parent"
-                android:layout_height="40dp" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:hint="Kegiatan Usaha"
+                android:inputType="text" />
+
+        </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -152,7 +152,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Nama Pengelola"
-                android:inputType="textEmailAddress" />
+                android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -167,7 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="No.Telp"
-                android:inputType="textEmailAddress" />
+                android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -182,7 +182,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Jumlah Anggota"
-                android:inputType="textEmailAddress" />
+                android:inputType="text" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -201,30 +201,13 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp">
-
-            <EditText
-                android:id="@+id/et_perijinan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Perijinan"
-                android:inputType="textEmailAddress" />
-
-        </android.support.design.widget.TextInputLayout>
-
-
-
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="@color/colorPrimary"
-            android:text="Submit"
+            android:text="Next"
             android:textColor="@android:color/white" />
 
 

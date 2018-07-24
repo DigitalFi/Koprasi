@@ -113,6 +113,7 @@
 
         </LinearLayout>
 
+        //datepicker
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -162,7 +163,7 @@
                     android:id="@+id/date_show"
                     android:padding="10dp"
                     android:textSize="20dp"
-                    android:text="text"
+                    android:text=""
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
@@ -225,9 +226,9 @@
                 android:layout_height="match_parent"
                 android:gravity="left"
                 android:checked="false"
-                android:text="Data Awal : Tidak / Dilaksanakan"
-                android:textOff="TIDAK"
-                android:textOn="DILAKSANAKAN" />
+                android:text="Data Awal : Tidak / Ya"
+                android:textOff="Tidak"
+                android:textOn="Ya" />
 
         </LinearLayout>
 
@@ -244,9 +245,9 @@
                 android:layout_height="match_parent"
                 android:gravity="left"
                 android:checked="false"
-                android:text="Bulan Berjalan : Tidak / Dilaksanakan"
-                android:textOff="TIDAK"
-                android:textOn="DILAKSANAKAN" />
+                android:text="Bulan Berjalan : Tidak / Ya"
+                android:textOff="Tidak"
+                android:textOn="Ya" />
 
         </LinearLayout>
         //BAGIAN ANGGARAN DASAR
@@ -270,7 +271,7 @@
                 android:gravity="left"
                 android:checked="false"
                 android:text="Data Awal : Tidak / Ada"
-                android:textOff="TIDAK"
+                android:textOff="Tidak"
                 android:textOn="ADA" />
 
         </LinearLayout>
@@ -289,7 +290,7 @@
                 android:gravity="left"
                 android:checked="false"
                 android:text="Bulan Berjalan : Tidak / Ada"
-                android:textOff="TIDAK"
+                android:textOff="Tidak"
                 android:textOn="ADA" />
 
         </LinearLayout>
@@ -315,26 +316,7 @@
                 android:gravity="left"
                 android:checked="false"
                 android:text="Data Awal : Tidak / Ada"
-                android:textOff="TIDAK"
-                android:textOn="ADA" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-
-            <Switch
-                android:padding="10dp"
-                android:id="@+id/bulanberjalan_art"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="left"
-                android:checked="false"
-                android:text="Bulan Berjalan : Tidak / Ada"
-                android:textOff="TIDAK"
+                android:textOff="Tidak"
                 android:textOn="ADA" />
 
         </LinearLayout>
@@ -360,7 +342,7 @@
                 android:gravity="left"
                 android:checked="false"
                 android:text="Data Awal : Tidak / Ada"
-                android:textOff="TIDAK"
+                android:textOff="Tidak"
                 android:textOn="ADA" />
 
         </LinearLayout>
@@ -379,7 +361,7 @@
                 android:gravity="left"
                 android:checked="false"
                 android:text="Bulan Berjalan : Tidak / Ada"
-                android:textOff="TIDAK"
+                android:textOff="Tidak"
                 android:textOn="ADA" />
 
         </LinearLayout>
@@ -405,7 +387,7 @@
                 android:gravity="left"
                 android:checked="false"
                 android:text="Data Awal : Tidak / Ada"
-                android:textOff="TIDAK"
+                android:textOff="Tidak"
                 android:textOn="ADA" />
 
         </LinearLayout>
@@ -424,7 +406,7 @@
                 android:gravity="left"
                 android:checked="false"
                 android:text="Bulan Berjalan : Tidak / Ada"
-                android:textOff="TIDAK"
+                android:textOff="Tidak"
                 android:textOn="ADA" />
 
         </LinearLayout>
@@ -450,7 +432,7 @@
                 android:gravity="left"
                 android:checked="false"
                 android:text="Data Awal : Tidak / Ada"
-                android:textOff="TIDAK"
+                android:textOff="Tidak"
                 android:textOn="ADA" />
 
         </LinearLayout>
@@ -469,43 +451,10 @@
                 android:gravity="left"
                 android:checked="false"
                 android:text="Bulan Berjalan : Tidak / Ada"
-                android:textOff="TIDAK"
+                android:textOff="Tidak"
                 android:textOn="ADA" />
 
         </LinearLayout>
-
-        //BAGIAN LEGALITAS
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Legalitas"
-            android:textStyle="bold"/>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/dataawal_lg"
-                android:hint="Data Awal"
-                android:inputType="text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/bulanberjalan_lg"
-                android:hint="Bulan Berjalan"
-                android:inputType="text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btnNext"

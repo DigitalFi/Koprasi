@@ -139,17 +139,17 @@ public class MainPemkod extends AppCompatActivity
     }
 
     public void notifikasi_pemkod(View view) {
-        Intent intent = new Intent(MainPemkod.this, notifikasi_pemkod.class);
+        Intent intent = new Intent(MainPemkod.this, Approval_Pemkod.class);
         startActivity(intent);
     }
 
     public void daftar_koperasi(View view) {
-        Intent intent = new Intent(MainPemkod.this, history_data_pemkod.class);
+        Intent intent = new Intent(MainPemkod.this, History_Pemkod.class);
         startActivity(intent);
     }
 
     public void history_pemkod(View view) {
-        Intent intent = new Intent(MainPemkod.this, history_data_pemkod.class);
+        Intent intent = new Intent(MainPemkod.this, History_Pemkod.class);
         startActivity(intent);
     }
 

@@ -108,7 +108,7 @@ public class MainKecamatan extends AppCompatActivity
     public void logoutUser() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
-        builder.setMessage("Do you want to Exit?");
+        builder.setMessage("Anda Yakin Ingin Keluar?");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -147,22 +147,9 @@ public class MainKecamatan extends AppCompatActivity
     }
 
     public void history_kecamatan(View view) {
-        Intent intent = new Intent(MainKecamatan.this, history_data_kecamatan.class);
+        Intent intent = new Intent(MainKecamatan.this, History_Kecamatan.class);
         startActivity(intent);
     }
 
-    public void Approval_Kelembagaan (View view) {
-        Intent intent = new Intent(MainKecamatan.this, Approval_Kelembagaan.class);
-        startActivity(intent);
-    }
-
-    public void Approval_Pengurus (View view) {
-        Intent intent = new Intent(MainKecamatan.this, Approval_Pengurus.class);
-        startActivity(intent);
-    }
-    public void Approval_BidangUsaha (View view) {
-        Intent intent = new Intent(MainKecamatan.this, Approval_BidangUsaha.class);
-        startActivity(intent);
-    }
 
 }

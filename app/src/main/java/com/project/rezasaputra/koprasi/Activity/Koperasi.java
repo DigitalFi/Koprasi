@@ -11,7 +11,6 @@ public class Koperasi {
     public String nm_koperasi;
     public String no_badan_hukum;
 
-
     public Koperasi() {
 
     }
