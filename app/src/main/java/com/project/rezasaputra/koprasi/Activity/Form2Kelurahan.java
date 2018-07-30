@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Switch;
@@ -42,6 +43,8 @@ public class Form2Kelurahan extends AppCompatActivity {
 
     private ProgressDialog pDialog;
     private SharedPreferences idkop;
+    private SharedPreferences pref_idPerkembangan;
+    private SharedPreferences pref;
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
     private TextView date_show;
@@ -49,8 +52,9 @@ public class Form2Kelurahan extends AppCompatActivity {
     private Button btnNext;
     private EditText dataawalKea;
     private EditText bulanberKea;
-    private EditText dataawal_lg, bulanberjalan_lg;
     Switch dataawal_rat, bulanberjalan_rat, dataawal_ad, bulanberjalan_ad, dataawal_art, bulanberjalan_art, dataawal_pad, bulanberjalan_pad, dataawal_pk, bulanberjalan_pk, dataawal_kd, bulanberjalan_kd;
+
+    String selectedMsg;
 
 
     @Override
@@ -64,6 +68,11 @@ public class Form2Kelurahan extends AppCompatActivity {
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
 
+        //Inialisasi Prefrences
+        idkop = getSharedPreferences("koperasi", MODE_PRIVATE);
+        pref_idPerkembangan = getSharedPreferences("idper", MODE_PRIVATE);
+        pref = getSharedPreferences("data", MODE_PRIVATE);
+
         // inisialisasi variable
         btnNext = (Button) findViewById(R.id.btnNext);
         date_show = (TextView) findViewById(R.id.date_show);
@@ -74,17 +83,14 @@ public class Form2Kelurahan extends AppCompatActivity {
         dataawal_ad = (Switch) findViewById(R.id.dataawal_ad);
         bulanberjalan_ad = (Switch) findViewById(R.id.bulanberjalan_ad);
         dataawal_art = (Switch) findViewById(R.id.dataawal_art);
-        bulanberjalan_art = (Switch) findViewById(R.id.bulanberjalan_art);
         dataawal_pad = (Switch) findViewById(R.id.dataawal_pad);
         bulanberjalan_pad = (Switch) findViewById(R.id.bulanberjalan_pad);
         dataawal_pk = (Switch) findViewById(R.id.dataawal_pk);
         bulanberjalan_pk = (Switch) findViewById(R.id.bulanberjalan_pk);
         dataawal_kd = (Switch) findViewById(R.id.dataawal_kd);
         bulanberjalan_kd = (Switch) findViewById(R.id.bulanberjalan_kd);
-        dataawal_lg = (EditText) findViewById(R.id.dataawal_lg);
-        bulanberjalan_lg = (EditText) findViewById(R.id.bulanberjalan_lg);
 
-        dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+        dateFormatter = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
 
         date_show = (TextView) findViewById(R.id.date_show);
         btnDatePicker = (Button) findViewById(R.id.btnDatepicker);
@@ -95,12 +101,24 @@ public class Form2Kelurahan extends AppCompatActivity {
             }
         });
 
+        final String nama = idkop.getString("nama", "");
+        final String badanhukum = idkop.getString("badanhukum", "");
+        final String alamat = idkop.getString("alamat", "");
+
+        TextView badanhktxt = (TextView) findViewById(R.id.badanhukumKp);
+        TextView alamattxt = (TextView) findViewById(R.id.alamatKp);
+        TextView namatxt  = (TextView) findViewById(R.id.namaKp);
+
+        badanhktxt.setText(badanhukum);
+        alamattxt.setText(alamat);
+        namatxt.setText(nama);
+
         //mengambil data dari switch
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String dataawalrat, bulanberjalanrat, dataawalad, bulanberjalanad, dataawalart, bulanberjalanart, dataawalpad, bulanberjalanpad, dataawalpk, bulanberjalanpk, dataawalkd, bulanberjalankd;
+                String dataawalrat, bulanberjalanrat, dataawalad, bulanberjalanad, dataawalart, dataawalpad, bulanberjalanpad, dataawalpk, bulanberjalanpk, dataawalkd, bulanberjalankd;
                 if (dataawal_rat.isChecked())
                     dataawalrat = dataawal_rat.getTextOn().toString();
                 else
@@ -134,10 +152,6 @@ public class Form2Kelurahan extends AppCompatActivity {
                     bulanberjalanad = bulanberjalan_ad.getTextOn().toString();
                 else
                     bulanberjalanad = bulanberjalan_ad.getTextOff().toString();
-                if (bulanberjalan_art.isChecked())
-                    bulanberjalanart = bulanberjalan_art.getTextOn().toString();
-                else
-                    bulanberjalanart = bulanberjalan_art.getTextOff().toString();
                 if (bulanberjalan_pad.isChecked())
                     bulanberjalanpad = bulanberjalan_pad.getTextOn().toString();
                 else
@@ -151,31 +165,19 @@ public class Form2Kelurahan extends AppCompatActivity {
                 else
                     bulanberjalankd = bulanberjalan_kd.getTextOff().toString();
 
-                idkop = getSharedPreferences("koperasi", MODE_PRIVATE);
                 final String idKop = idkop.getString("id_kop", "");
+                final String idPer = pref_idPerkembangan.getString("id_perkembangan", "");
+                final String idUser = pref.getString("user_id","");
                 String tanggal = date_show.getText().toString().trim();
                 String dtkea = dataawalKea.getText().toString().trim();
                 String bbkea = bulanberKea.getText().toString().trim();
-                String dtrat  = dataawal_rat.getTextOn().toString().trim();
-                String dtad  = dataawal_ad.getTextOn().toString().trim();
-                String dtart  = dataawal_art.getTextOn().toString().trim();
-                String dtpad  = dataawal_pad.getTextOn().toString().trim();
-                String dtpk  = dataawal_pk.getTextOn().toString().trim();
-                String dtkd  = dataawal_kd.getTextOn().toString().trim();
-                String bbrat  = bulanberjalan_rat.getTextOn().toString().trim();
-                String bbad  = bulanberjalan_ad.getTextOn().toString().trim();
-                String bbart  = bulanberjalan_art.getTextOn().toString().trim();
-                String bbpad  = bulanberjalan_pad.getTextOn().toString().trim();
-                String bbpk = bulanberjalan_pk.getTextOn().toString().trim();
-                String bbkd = bulanberjalan_kd.getTextOn().toString().trim();
-                String dtlg = dataawal_lg.getText().toString().trim();
-                String bblg = bulanberjalan_lg.getText().toString().trim();
 
-                // ngecek apakah inputannya kosong atau tidak
-                if (!idKop.isEmpty() && !tanggal.isEmpty() && !dtkea.isEmpty() && !bbkea.isEmpty() && !dtrat.isEmpty() && !bbrat.isEmpty() && !dtad.isEmpty() && !bbad.isEmpty() && !dtart.isEmpty() && !bbart.isEmpty() && !dtpad.isEmpty() && !bbpad.isEmpty() && !dtpk.isEmpty() && !bbpk.isEmpty() && !dtkd.isEmpty() && !bbkd.isEmpty() && !dtlg.isEmpty() && !bblg.isEmpty()){
+                // ngecek apakah inputannya kosong atau Tidak
+                if (!idUser.isEmpty() && !idKop.isEmpty() && !tanggal.isEmpty() && !dtkea.isEmpty() && !bbkea.isEmpty() && !dataawalrat.isEmpty() && !bulanberjalanrat.isEmpty() && !dataawalad.isEmpty() && !bulanberjalanad.isEmpty() && !dataawalart.isEmpty() && !dataawalpad.isEmpty() && !bulanberjalanpad.isEmpty() && !dataawalpk.isEmpty() && !bulanberjalanpk.isEmpty() && !dataawalkd.isEmpty() && !bulanberjalankd.isEmpty()){
                     // login user
-                    checkUpload(idKop, tanggal, dtkea, bbkea, dtrat, bbrat, dtad, bbad, dtart, bbart, dtpad, bbpad, dtpk, bbpk, dtkd, bbkd, dtlg, bblg);
-                    //Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "Switch1 :" + keaktifan + "\n" + "Switch2 :" + rapat + "\n" +  "jumlah :" + jumlah, Toast.LENGTH_LONG).show(); // display the current state for switch's
+                    checkUpload(idUser, idKop, tanggal, dtkea, bbkea, dataawalrat, bulanberjalanrat, dataawalad, bulanberjalanad, dataawalart, dataawalpad, bulanberjalanpad, dataawalpk, bulanberjalanpk, dataawalkd, bulanberjalankd);
+
+                    //Toast.makeText(getApplicationContext(), "idPer :" + idPer , Toast.LENGTH_LONG).show(); // display the current state for switch's
                 } else {
                     // jika inputan kosong tampilkan pesan
                     Toast.makeText(getApplicationContext(),
@@ -183,6 +185,37 @@ public class Form2Kelurahan extends AppCompatActivity {
                             .show();
                 }
 
+            }
+        });
+
+
+        //inisialisasi enable switch for ad
+        /*String dtad;
+        if (dataawal_ad.isChecked()) {
+            dtad = dataawal_ad.getTextOn().toString();
+            Toast.makeText(getApplicationContext(), "cek" + dtad, Toast.LENGTH_LONG).show();
+        } else {
+            dtad = dataawal_ad.getTextOff().toString();
+            Toast.makeText(getApplicationContext(), "cek" + dtad, Toast.LENGTH_LONG).show();
+        }
+
+        if (dtad == "Tidak"){
+            //memberi kondisi jika tidak ada data awal maka dia akan muncul bulan berjalan
+            bulanberjalan_ad.setVisibility(View.GONE);
+        }else {
+            bulanberjalan_ad.setVisibility(View.VISIBLE);
+        }*/
+
+        dataawal_ad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // do something, the isChecked will be
+                // true if the switch is in the On position
+                boolean checked = ((Switch) buttonView).isChecked();
+                    bulanberjalan_ad.setVisibility(View.VISIBLE);
+                if (checked)
+                {
+                    bulanberjalan_ad.setVisibility(View.GONE);
+                }
             }
         });
 
@@ -228,7 +261,7 @@ public class Form2Kelurahan extends AppCompatActivity {
 
     }
 
-    private void checkUpload(final String idKop, final String tanggal, final String dtkea, final String bbkea, final String dtrat, final String bbrat, final String dtad, final String bbad, final String dtart, final String bbart, String dtpad, String bbpad, final String dtpk, final String bbpk, final String dtkd, final String bbkd, final String dtlg, final String bblg) {
+    private void checkUpload(final String idUser, final String idKop, final String tanggal, final String dtkea, final String bbkea, final String dtrat, final String bbrat, final String dtad, final String bbad, final String dtart, final String dtpad, final String bbpad, final String dtpk, final String bbpk, final String dtkd, final String bbkd) {
         // Tag biasanya digunakan ketika ingin membatalkan request volley
         String tag_string_req = "req_login";
         pDialog.setMessage("Loading ...");
@@ -245,25 +278,23 @@ public class Form2Kelurahan extends AppCompatActivity {
                 try {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
+                    String idPerkembangan = jObj.getString("id_perkembangan");
                     //save id kelembagaan
+                    SharedPreferences.Editor editor = pref_idPerkembangan.edit();
+                    editor.putString("id_perkembangan", idPerkembangan);
+                    editor.commit();
+
 
                     // ngecek node error dari api
                     if (!error) {
                         // user berhasil login
-                        /*JSONObject data = jObj.getJSONObject("data");
-                        String koperasi_id = data.getString("id_koperasi");
-                        String keaktifan_status = data.getString("status_keaktifan");
-                        String anggota_rapat = data.getString("rapat_anggota");
-                        String roles_name = data.getString("jml_anggota");
-                        String kec_id = data.getString("photo");
-                        String kel_id = jObj.getString("create_date");
-                        Integer roles_id = jObj.getInt("create_by");*/
 
                         //jika sudah masuk ke mainactivity
                         Intent intent = new Intent(Form2Kelurahan.this,
-                                Form2Kelurahan1.class);
+                                Form2Kelurahan3.class);
                         startActivity(intent);
                         finish();
+
                     } else {
                         //terjadi error dan tampilkan pesan error dari API
                         Toast.makeText(getApplicationContext(), "Terjadi Kesalahan", Toast.LENGTH_LONG).show();
@@ -298,16 +329,16 @@ public class Form2Kelurahan extends AppCompatActivity {
                 params.put("jml_anggota_berjalan", bbkea);
                 params.put("rapat_anggota_awal", dtrat);
                 params.put("rapat_anggota_berjalan", bbrat);
+                params.put("anggaran_dasar_awal", dtad);
+                params.put("anggaran_dasar_berjalan", bbad);
                 params.put("art_awal", dtart);
-                params.put("art_berjalan", bbart);
-                params.put("ubah_anggaran_dsr_awal", dtad);
-                params.put("ubah_anggaran_dsr_berjalan", bbad);
+                params.put("ubah_anggaran_dsr_awal", dtpad);
+                params.put("ubah_anggaran_dsr_berjalan", bbpad);
                 params.put("peraturan_khusus_awal", dtpk);
                 params.put("peraturan_khusus_berjalan", bbpk);
                 params.put("anggota_dekopinda_awal", dtkd);
                 params.put("anggota_dekopinda_berjalan", bbkd);
-                params.put("legalitas_awal", dtlg);
-                params.put("legalitas_berjalan", bblg);
+                params.put("user_id", idUser);
                 return params;
             }
         };

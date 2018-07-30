@@ -98,8 +98,8 @@
                     android:layout_height="match_parent"
                     android:gravity="left"
                     android:checked="false"
-                    android:text="Status Usaha"
-                    android:textOff="TIDAK AKTIF"
+                    android:text="Status Usaha tidak/aktif"
+                    android:textOff="Tidak AKTIF"
                     android:textOn="AKTIF" />
 
             </LinearLayout>
@@ -150,7 +150,7 @@
                 <EditText
                     android:id="@+id/et_data_omzet"
                     android:hint="Omzet"
-                    android:inputType="text"
+                    android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -165,7 +165,7 @@
                 <EditText
                     android:id="@+id/et_data_simpanan_usaha"
                     android:hint="Simpanan Pokok"
-                    android:inputType="text"
+                    android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -180,7 +180,7 @@
                 <EditText
                     android:id="@+id/et_data_jumlah_simpanan_usaha"
                     android:hint="Jumlah Simpanan Pokok"
-                    android:inputType="text"
+                    android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -195,7 +195,7 @@
                 <EditText
                     android:id="@+id/et_data_simpanan_wajib_usaha"
                     android:hint="Simpanan Wajib"
-                    android:inputType="text"
+                    android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -210,7 +210,7 @@
                 <EditText
                     android:id="@+id/et_data_jumlah_simpanan_wajib_usaha"
                     android:hint="Jumlah Simpanan Wajib"
-                    android:inputType="text"
+                    android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -224,8 +224,8 @@
 
                 <EditText
                     android:id="@+id/et_data_shu_tahunan"
-                    android:hint="SHU Tahunan Berjalan"
-                    android:inputType="text"
+                    android:hint="SHU Tahun Berjalan"
+                    android:inputType="numberDecimal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 

@@ -13,7 +13,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
 
-
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -21,9 +20,9 @@
     <application
         android:name=".Activity.helper.AppController"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_apps_foreground"
-        android:label="SIM POKJA"
-        android:roundIcon="@mipmap/ic_apps_round"
+        android:icon="@mipmap/ic_apps_kop"
+        android:label="Sim|Pok"
+        android:roundIcon="@mipmap/ic_apps_kop_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".Activity.MainActivity">
@@ -36,24 +35,30 @@
         <activity
             android:name=".Activity.Login"
             android:label="@string/title_activity_login"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Activity.MainKelurahan"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.testdata"
             android:label="@string/title_activity_testdata"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.MainKecamatan"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.MainPemkod"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.FormKelurahan"
             android:label=""
             android:parentActivityName=".Activity.MainKelurahan"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -63,6 +68,7 @@
             android:name=".Activity.Form1Kelurahan"
             android:label=""
             android:parentActivityName=".Activity.FormKelurahan"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -71,11 +77,13 @@
         <activity
             android:name=".Activity.Form2Kelurahan"
             android:label=""
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.Form1Kelurahan1"
             android:label=""
             android:parentActivityName=".Activity.Form1Kelurahan"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -85,6 +93,7 @@
             android:name=".Activity.Form2Kelurahan1"
             android:label=""
             android:parentActivityName=".Activity.Form2Kelurahan"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -93,11 +102,13 @@
         <activity
             android:name=".Activity.Form3Kelurahan"
             android:label=""
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.Form2Kelurahan2"
             android:label=""
             android:parentActivityName=".Activity.Form2Kelurahan1"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -107,22 +118,18 @@
             android:name=".Activity.Form2Kelurahan3"
             android:label=""
             android:parentActivityName=".Activity.Form2Kelurahan2"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.rezasaputra.koprasi.Activity.Form2Kelurahan2" />
         </activity>
         <activity android:name=".Activity.notifikasi_pemkod" />
-        <activity android:name=".Activity.Daftar_koperasi_pemkod" />
-        <activity android:name=".Activity.history_data_pemkod" />
-        <activity android:name=".Activity.history_data_kelurahan" />
-        <activity android:name=".Activity.history_data_kecamatan" />
-        <activity android:name=".Activity.Detail_koperasi" />
-        <activity android:name=".Activity.detail_notif_koperasi" />
         <activity
             android:name=".Activity.Form1Kelurahan2"
             android:label=""
             android:parentActivityName=".Activity.Form1Kelurahan1"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -132,6 +139,7 @@
             android:name=".Activity.Form1Kelurahan3"
             android:label=""
             android:parentActivityName=".Activity.Form1Kelurahan2"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -141,6 +149,7 @@
             android:name=".Activity.Form1Kelurahan4"
             android:label=""
             android:parentActivityName=".Activity.Form1Kelurahan3"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -150,6 +159,7 @@
             android:name=".Activity.Form1Kelurahan5"
             android:label=""
             android:parentActivityName=".Activity.Form1Kelurahan4"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -168,11 +178,46 @@
 
         <activity
             android:name=".Activity.Approval_Kecamatan"
-            android:label="@string/title_activity_approval__kecamatan"
+            android:label=""
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".Activity.Approval_Kelembagaan" />
-        <activity android:name=".Activity.Approval_Pengurus" />
-        <activity android:name=".Activity.Approval_BidangUsaha"></activity>
+        <activity
+            android:name=".Activity.Approval_Pemkod"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.History_Kelurahan"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.History_Kecamatan"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.History_Pemkod"
+            android:label="@string/title_activity_history__pemkod"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.SlidePageF1"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.SlidePageTdkaktif"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Activity.Form3Kelurahan1"
+            android:label="@string/title_activity_form3_kelurahan1"
+            android:parentActivityName=".Activity.MainKelurahan"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rezasaputra.koprasi.Activity.MainKelurahan" />
+        </activity>
     </application>
 
 </manifest>

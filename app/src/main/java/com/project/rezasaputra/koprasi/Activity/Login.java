@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.NetworkError;
@@ -37,7 +36,6 @@ public class Login extends Activity {
     private static final String TAG = Login.class.getSimpleName();
 
     private Button btnLogin;
-    private TextView btnLinkToRegister,skip,reset;
     private EditText inputEmail;
     private EditText inputPassword;
     private ProgressDialog pDialog;
@@ -84,7 +82,7 @@ public class Login extends Activity {
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
 
-                // ngecek apakah inputannya kosong atau tidak
+                // ngecek apakah inputannya kosong atau Tidak
                 if (!email.isEmpty() && !password.isEmpty()) {
                     // login user
                     checkLogin(email, password);
@@ -129,7 +127,6 @@ public class Login extends Activity {
                         String kel_id = jObj.getString("id_kel");
                         Integer roles_id = jObj.getInt("roles_id");
 
-
                         // buat session user yang sudah login yang menyimpan id,nama,full name, roles id, roles name
                         SharedPreferences.Editor editor = pref.edit();
                         editor.putString("user_id", user_id);
@@ -163,9 +160,9 @@ public class Login extends Activity {
                         finish();
                     } else {
                         //terjadi error dan tampilkan pesan error dari API
-                        String errorMsg = jObj.getString("message");
+                        //String errorMsg = jObj.getString("message");
                         Toast.makeText(getApplicationContext(),
-                                errorMsg, Toast.LENGTH_LONG).show();
+                                "Username atau password yang anda masukan salah", Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {
                     // JSON error

@@ -138,4 +138,11 @@
     <string name="title_activity_approval__kecamatan">Approval_Kecamatan</string>
     <string name="title_activity_approval__dtl__kecamatan">Approval_Dtl_Kecamatan</string>
     <string name="title_activity_list_kelembagaan">ListKelembagaan</string>
+    <string name="title_activity_approval__pemkod">Approval_Pemkod</string>
+    <string name="title_activity_history__kelurahan">History_Kelurahan</string>
+    <string name="title_activity_history__kecamatan">History_Kecamatan</string>
+    <string name="title_activity_history__pemkod">History_Pemkod</string>
+    <string name="title_activity_slide_page_f1">SlidePageF1</string>
+    <string name="title_activity_slide_page_tdkaktif">SlidePageTdkaktif</string>
+    <string name="title_activity_form3_kelurahan1">Form3Kelurahan1</string>
 </resources>

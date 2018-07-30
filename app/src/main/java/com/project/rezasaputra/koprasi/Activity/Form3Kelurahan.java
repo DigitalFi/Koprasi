@@ -44,14 +44,16 @@ public class Form3Kelurahan extends AppCompatActivity {
 
     private SharedPreferences idUsahaf3;
     private SharedPreferences idStatusf3;
+    private SharedPreferences pref_idTemuan;
 
     private EditText nm_kop, nobdn, tglbdn, almt, nm_pngl, tlp, jml_angt, sbrn_anggota, perizinan ;
     Button btnSubmit;
     private ProgressDialog pDialog;
+    private String idTemuan;
 
     Spinner spinnerst , spinnerkg;
-    String reffstatus="https://koperasi.digitalfatih.com/apigw/reff/status_kantor_temuan";
-    String reffkgusaha="https://koperasi.digitalfatih.com/apigw/reff/jenis_usaha";
+    String reffstatus="https://koperasidev.gobisnis.online/apigw/reff/status_kantor_temuan";
+    String reffkgusaha="https://koperasidev.gobisnis.online/apigw/reff/jenis_usaha";
 
 
 
@@ -63,8 +65,13 @@ public class Form3Kelurahan extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // Progress dialog
+        pDialog = new ProgressDialog(this);
+        pDialog.setCancelable(false);
+
+        pref_idTemuan = getSharedPreferences("idtemuan", MODE_PRIVATE);
+
         spinnerst=(Spinner)findViewById(R.id.sp_status);
-        spinnerkg=(Spinner)findViewById(R.id.sp_kgusaha);
 
         btnSubmit = (Button) findViewById(R.id.btnSubmit);
         nm_kop = (EditText) findViewById(R.id.et_nmkop);
@@ -75,27 +82,6 @@ public class Form3Kelurahan extends AppCompatActivity {
         tlp = (EditText) findViewById(R.id.et_tlp);
         jml_angt = (EditText) findViewById(R.id.et_jmlag);
         sbrn_anggota = (EditText) findViewById(R.id.et_sbag);
-        perizinan = (EditText) findViewById(R.id.et_perijinan);
-
-        loadSpinnerData(reffkgusaha);
-        spinnerkg.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                bidang_usaha usaha = (bidang_usaha) adapterView.getSelectedItem();
-                final SharedPreferences idUsahaf3 = getApplicationContext().getSharedPreferences("usaha", 0);// 0 - for private mode
-                SharedPreferences.Editor editor = idUsahaf3.edit();
-                editor.putString("id_unit_usaha", usaha.getId());
-                editor.commit();
-
-                Toast.makeText(Form3Kelurahan.this, "Id Usaha: "+idUsahaf3.getString("id_unit_usaha", null)+",  Nama Koperasi : "+usaha.getName(), Toast.LENGTH_SHORT).show();
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                // DO Nothing here
-            }
-        });
 
         loadSpinnerDataStatus(reffstatus);
         spinnerst.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -107,7 +93,7 @@ public class Form3Kelurahan extends AppCompatActivity {
                 editor.putString("id_status", status.getId());
                 editor.commit();
 
-                Toast.makeText(Form3Kelurahan.this, "Id Usaha: "+idStatusf3.getString("id_status", null)+",  Nama Koperasi : "+status.getName(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Form3Kelurahan.this, "Id Usaha: "+idStatusf3.getString("id_status", null)+",  Nama Koperasi : "+status.getName(), Toast.LENGTH_SHORT).show();
 
             }
 
@@ -134,20 +120,21 @@ public class Form3Kelurahan extends AppCompatActivity {
                 String telepon = tlp.getText().toString().trim();
                 String jml_anggta  = jml_angt.getText().toString().trim();
                 String sebaran  = sbrn_anggota.getText().toString().trim();
-                String perijinan  = perizinan.getText().toString().trim();
 
 
-                // ngecek apakah inputannya kosong atau tidak
-                if (!nama.isEmpty() &&  !no_badan.isEmpty() && !tgl_badan.isEmpty() && !alamat.isEmpty()&& !id_bidangusaha.isEmpty() && !id_status.isEmpty()&& !nama_pengelola.isEmpty()&& !telepon.isEmpty()&& !jml_anggta.isEmpty() && !jml_anggta.isEmpty() && !sebaran.isEmpty() && !perijinan.isEmpty() ){
+                // ngecek apakah inputannya kosong atau Tidak
+                if (!nama.isEmpty() &&  !no_badan.isEmpty() && !tgl_badan.isEmpty() && !alamat.isEmpty()&& !id_status.isEmpty()&& !nama_pengelola.isEmpty()&& !telepon.isEmpty()&& !jml_anggta.isEmpty() && !jml_anggta.isEmpty() && !sebaran.isEmpty() ){
                     // login user
-                    checkUpload(nama, no_badan, tgl_badan, alamat, id_bidangusaha, id_status, nama_pengelola, telepon, jml_anggta, sebaran, perijinan);
+                    checkUpload(nama, no_badan, tgl_badan, alamat, id_status, nama_pengelola, telepon, jml_anggta, sebaran);
+
+                    Toast.makeText(getApplicationContext(), nama + "\n" + no_badan + "\n" +  alamat + "\n"  + id_status + "\n"  + nama_pengelola, Toast.LENGTH_LONG).show(); // display the current state for switch's
+
                     //Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "Switch1 :" + keaktifan + "\n" + "Switch2 :" + rapat + "\n" +  "jumlah :" + jumlah, Toast.LENGTH_LONG).show(); // display the current state for switch's
                 } else {
                     // jika inputan kosong tampilkan pesan
                     Toast.makeText(getApplicationContext(),
                             "harap isi dengan benar", Toast.LENGTH_LONG)
                             .show();
-                    //Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "kelembagaan :" + idKelembagaan + "\n" + "jabatan :" + id_jabatan + "\n" +  "nama :" + nama + "\n" +  "tlp :" + tlp + "\n" +  "alamat :" + alamat, Toast.LENGTH_LONG).show(); // display the current state for switch's
 
                 }
             }
@@ -156,12 +143,13 @@ public class Form3Kelurahan extends AppCompatActivity {
 
     }
 
-    private void checkUpload(final String nama, final String no_badan, final String tgl_badan, final String alamat, final String id_bidangusaha, final String id_status, final String nama_pengelola, final String telepon, final String jml_anggta, final String sebaran, final String perijina) {
+    private void checkUpload(final String nama, final String no_badan, final String tgl_badan, final String alamat, final String id_status, final String nama_pengelola, final String telepon, final String jml_anggta, final String sebaran) {
 
         // Tag biasanya digunakan ketika ingin membatalkan request volley
         String tag_string_req = "req_login";
         pDialog.setMessage("Loading ...");
         showDialog();
+
 
         StringRequest strReq = new StringRequest(Request.Method.POST,
                 AppConfig.URL_INPUT_TEMUAN, new Response.Listener<String>() {
@@ -175,12 +163,19 @@ public class Form3Kelurahan extends AppCompatActivity {
                 {
                     JSONObject jObj = new JSONObject(response);
                     boolean error = jObj.getBoolean("error");
+                    String idTemuan = jObj.getString("id_temuan");
+                    //save id kelembagaan
+                    SharedPreferences.Editor editor = pref_idTemuan.edit();
+                    editor.putString("id_temuan", idTemuan);
+                    editor.commit();
 
                     // ngecek node error dari api
-                    //if (jObj.getString("status")==success) {
+                    //if (!error) {
 
                     //String msg = jObj.getString("msg");
-                    //Toast.makeText(getApplicationContext(), idkop, Toast.LENGTH_LONG).show();
+
+                    final String id = pref_idTemuan.getString("id_temuan", "");
+                    //Toast.makeText(getApplicationContext(), id, Toast.LENGTH_LONG).show();
 
                        /* JSONObject jObj1 = jObj.getString("data");
                         String idkop = jObj1.getString("id_koperasi");
@@ -203,7 +198,7 @@ public class Form3Kelurahan extends AppCompatActivity {
 
                     //jika sudah masuk ke mainactivity
                     Intent intent = new Intent(Form3Kelurahan.this,
-                            MainKelurahan.class);
+                            Form3Kelurahan1.class);
                     startActivity(intent);
                     finish();
                     //} else {
@@ -236,14 +231,13 @@ public class Form3Kelurahan extends AppCompatActivity {
                 params.put("nm_koperasi", nama);
                 params.put("no_badan_hukum", no_badan);
                 params.put("tgl_badan_hukum", tgl_badan);
-                params.put("status_kantor", no_badan);
+                params.put("status_kantor", id_status);
                 params.put("bidang_usaha", tgl_badan);
                 params.put("alamat", alamat);
                 params.put("nm_pengelola", nama_pengelola);
                 params.put("no_tlp", telepon);
                 params.put("jml_anggota", jml_anggta);
                 params.put("sebaran_anggota", sebaran);
-                params.put("perizinan_dimiliki", perijina);
 
                 return params;
             }

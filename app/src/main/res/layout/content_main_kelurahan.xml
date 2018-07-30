@@ -61,75 +61,69 @@
         app:layout_constraintRight_toRightOf="parent">
     </LinearLayout>
 
-    <!--atas-->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#eee"
-        android:weightSum="2">
+        android:orientation="vertical"
+        android:weightSum="3">
 
-        <RelativeLayout
-            android:padding="1dp"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#fff"
-                android:onClick="input"
-                tools:ignore="OnClick">
-
-                <LinearLayout
-                    android:id="@+id/kelurahan-input"
+        <!--atas-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp">
+                <android.support.v7.widget.CardView
+                    android:onClick="input"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/imageview"
-                        android:layout_width="190dp"
-                        android:layout_height="150dp"
-                        android:layout_marginBottom="210dp"
-                        android:layout_marginRight="10dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/inputdata" />
-
-                </LinearLayout>
-            </FrameLayout>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:padding="1dp"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#fff"
-                android:onClick="history">
-
-                <LinearLayout
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="30dp"
+                    app:cardBackgroundColor="#42aaf4">
+                    <TextView
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Input Data"
+                        android:textStyle="bold" />
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </LinearLayout>
+        <!--atas-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp">
+                <android.support.v7.widget.CardView
+                    android:onClick="temuan"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="30dp"
+                    app:cardBackgroundColor="#42aaf4">
+                    <TextView
+                        android:text="Input Temuan"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"/>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </LinearLayout>
 
-                    <ImageView
-                        android:id="@+id/imageview2"
-                        android:layout_width="190dp"
-                        android:layout_height="150dp"
-                        android:layout_marginBottom="210dp"
-                        android:layout_marginRight="10dp"
-                        android:scaleType="centerCrop"
-                        android:src="@mipmap/histori" />
-
-
-
-                </LinearLayout>
-            </FrameLayout>
-        </RelativeLayout>
     </LinearLayout>
 
 </LinearLayout>

@@ -60,7 +60,7 @@
         app:layout_constraintRight_toRightOf="parent">
     </LinearLayout>
 
-    <!--mainmenu-->
+    <!--mainmenu
     <LinearLayout
         android:background="#eee"
         android:layout_width="match_parent"
@@ -77,7 +77,6 @@
             android:orientation="vertical"
             android:weightSum="2">
 
-            <!--atas-->
             <LinearLayout
                 android:padding="5dp"
                 android:layout_width="wrap_content"
@@ -147,7 +146,6 @@
                 </RelativeLayout>
             </LinearLayout>
 
-            <!--tengah-->
             <LinearLayout
                 android:padding="5dp"
                 android:layout_width="wrap_content"
@@ -218,6 +216,42 @@
                 </RelativeLayout>
             </LinearLayout>
 
+        </LinearLayout>
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <!--atas-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp">
+                <android.support.v7.widget.CardView
+                    android:onClick="notifikasi_pemkod"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="30dp"
+                    app:cardBackgroundColor="#42aaf4">
+                    <TextView
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Notifikasi Approval"
+                        android:textStyle="bold" />
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 

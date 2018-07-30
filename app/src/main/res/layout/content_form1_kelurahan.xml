@@ -44,7 +44,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lengkapi Data Dibawah ini"
+                android:text="Pilih Nama Koperasi untuk melihat data koperasi"
                 android:layout_gravity="center"/>
 
         </FrameLayout>
@@ -55,89 +55,118 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:hint="Tlp/Fax"
-                    android:id="@+id/et_tlp_kel"
-                    android:inputType="textEmailAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:hint="website"
-                    android:id="@+id/et_website_kel"
-                    android:inputType="textEmailAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="E-mail"
-                android:id="@+id/et_email_kel"
-                android:inputType="textEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:hint="NPWP"
-                android:id="@+id/et_npwp_kel"
-                android:inputType="text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Status Kantor/Sekretaris"
-                android:textSize="15dp"
-                android:textStyle="bold"/>
+                android:padding="10dp">
 
-                <android.support.v7.widget.SwitchCompat
-                    android:id="@+id/sw_button"
+                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp"
-                    android:text="Aktif/Tidak "
-                    android:textColor="#000"
-                    android:theme="@style/TWOHSwitch"/>
+                    android:layout_height="match_parent"
+                    android:text="Pilih Nama Koperasi"
+                    android:textStyle="bold"/>
+            </FrameLayout>
 
-        </LinearLayout>
+            <FrameLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/namakoprasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_namakop"
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Koperasi :"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/namaKp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="No Badan Hukum :"
+                    android:textSize="15dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/badanhukumKp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Alamat Koperasi :"
+                    android:textStyle="bold"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/alamatKp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Telepon Koperasi :"
+                    android:textStyle="bold"
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/tlpKp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textSize="18dp" />
+
+            </LinearLayout>
 
                 <ImageView
                     android:padding="10dp"
@@ -146,34 +175,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/ImageView"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <!-- Capture picture button -->
-            <Button
-                android:id="@+id/btnCapture"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:background="@color/btn_bg"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:text="Foto  Koperasi"
-                android:textColor="@color/white" />
-
-            <TextView
-                android:id="@+id/image_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:text=""
-                android:textColor="@color/txt_font" />
-
-        </LinearLayout>
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/simpen"
+                <android.support.v7.widget.AppCompatButton
+                android:id="@+id/submit"
                 android:text="Next"
                 android:layout_gravity="right"
                 android:background="@color/colorPrimary"

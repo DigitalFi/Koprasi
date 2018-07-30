@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="Perkembangan Kelembagan"
+                android:text="Perkembangan Usaha"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"/>
@@ -50,31 +50,14 @@
 
         </FrameLayout>
 
-        //BAGIAN RAPAT ANGGOTA
+        //BAGIAN Kegiatan Usaha
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Volume Usaha"
+            android:text="Kegiatan Usaha"
+            android:paddingTop="20dp"
             android:textStyle="bold"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-
-            <Switch
-                android:padding="10dp"
-                android:id="@+id/dataawal_vu"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="left"
-                android:checked="false"
-                android:text="Data Awal : Tetap / Bertambah"
-                android:textOff="TETAP"
-                android:textOn="BERTAMBAH" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,7 +67,7 @@
 
             <Switch
                 android:padding="10dp"
-                android:id="@+id/bulanberjalan_vu"
+                android:id="@+id/bulanberjalan_ku"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="left"
@@ -95,12 +78,11 @@
 
         </LinearLayout>
 
-        //BAGIAN KEANGGOTAAN
+        //BAGIAN Volume Usaha
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kegiatan Usaha"
-            android:paddingTop="20dp"
+            android:text="Volume Usaha"
             android:textStyle="bold"/>
 
         <android.support.design.widget.TextInputLayout
@@ -108,7 +90,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/dataawal_ku"
+                android:id="@+id/dataawal_vu"
                 android:hint="Data Awal"
                 android:inputType="text"
                 android:layout_width="match_parent"
@@ -121,7 +103,7 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/bulanberjalan_ku"
+                android:id="@+id/bulanberjalan_vu"
                 android:hint="Bulan Berjalan"
                 android:inputType="text"
                 android:layout_width="match_parent"

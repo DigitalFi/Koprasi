@@ -82,6 +82,25 @@
                     android:layout_height="40dp" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <Switch
+                    android:padding="10dp"
+                    android:id="@+id/jenis_klm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left"
+                    android:checked="false"
+                    android:text="Jenis Kelamin Pria / Wanita"
+                    android:textOff="Pria"
+                    android:textOn="Wanita" />
+
+            </LinearLayout>
+
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
@@ -106,7 +125,7 @@
                 <EditText
                     android:hint="Nomor Tlp"
                     android:id="@+id/et_pengurus_tlp_kel"
-                    android:inputType="number"
+                    android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -127,14 +146,47 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.v7.widget.AppCompatButton
-                android:text="Next"
-                android:id="@+id/btnNext"
-                android:layout_gravity="right"
-                android:background="@color/colorPrimary"
-                android:textColor="@android:color/white"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btnAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="Tambah Anggota"
+                        android:textColor="@android:color/white"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:padding="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btnNext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:text="Next"
+                        android:textColor="@android:color/white" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
