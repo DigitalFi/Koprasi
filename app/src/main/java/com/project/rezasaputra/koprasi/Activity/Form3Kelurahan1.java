@@ -51,6 +51,7 @@ public class Form3Kelurahan1 extends AppCompatActivity {
 
     private SharedPreferences idkop;
     private SharedPreferences pref_idTemuan;
+    private SharedPreferences pref;
     private SharedPreferences idLegal;
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
@@ -122,6 +123,10 @@ public class Form3Kelurahan1 extends AppCompatActivity {
                         String nomor = etNomor.getText().toString().trim();
                         String tgl = tvTanggal.getText().toString().trim();
 
+
+                        pref = getSharedPreferences("data", Context.MODE_PRIVATE);
+                        final String user = pref.getString("user_id", "");
+
                         //memberikan status
                         SharedPreferences.Editor editor = status.edit();
                         editor.putInt("status", 2);
@@ -130,7 +135,7 @@ public class Form3Kelurahan1 extends AppCompatActivity {
                         // ngecek apakah inputannya kosong atau Tidak
                         if (!idTemuan.isEmpty() && !id_legalitas.isEmpty() && !nomor.isEmpty() && !tgl.isEmpty()) {
                             // login user
-                            checkUpload(idTemuan, id_legalitas, nomor, tgl);
+                            checkUpload(idTemuan, id_legalitas, nomor, tgl, user);
                             //Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "Switch1 :" + keaktifan + "\n" + "Switch2 :" + rapat + "\n" +  "jumlah :" + jumlah, Toast.LENGTH_LONG).show(); // display the current state for switch's
                         } else {
                             // jika inputan kosong tampilkan pesan
@@ -153,6 +158,10 @@ public class Form3Kelurahan1 extends AppCompatActivity {
                         String nomor = etNomor.getText().toString().trim();
                         String tgl = tvTanggal.getText().toString().trim();
 
+
+                        pref = getSharedPreferences("data", Context.MODE_PRIVATE);
+                        final String user = pref.getString("user_id", "");
+
                         //memberikan status
                         SharedPreferences.Editor editor = status.edit();
                         editor.putInt("status", 1);
@@ -161,7 +170,7 @@ public class Form3Kelurahan1 extends AppCompatActivity {
                         // ngecek apakah inputannya kosong atau Tidak
                         if ( !idTemuan.isEmpty() && !id_legalitas.isEmpty() && !nomor.isEmpty() && !tgl.isEmpty()) {
                             // login user
-                            checkUpload(idTemuan, id_legalitas, nomor, tgl);
+                            checkUpload(idTemuan, id_legalitas, nomor, tgl, user);
                             //Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "Switch1 :" + keaktifan + "\n" + "Switch2 :" + rapat + "\n" +  "jumlah :" + jumlah, Toast.LENGTH_LONG).show(); // display the current state for switch's
                         } else {
                             // jika inputan kosong tampilkan pesan
@@ -184,7 +193,7 @@ public class Form3Kelurahan1 extends AppCompatActivity {
 
     }
 
-    private void checkUpload(final String idTemuan, final String id_legalitas, final String nomor, final String tgl) {
+    private void checkUpload(final String idTemuan, final String id_legalitas, final String nomor, final String tgl, final String user) {
         // Tag biasanya digunakan ketika ingin membatalkan request volley
         String tag_string_req = "req_login";
         pDialog.setMessage("Loading ...");
@@ -277,6 +286,7 @@ public class Form3Kelurahan1 extends AppCompatActivity {
                 params.put("id_type_legalitas", id_legalitas);
                 params.put("no_legalitas", nomor);
                 params.put("tgl_legalitas", tgl);
+                params.put("user_id", user);
                 return params;
             }
         };

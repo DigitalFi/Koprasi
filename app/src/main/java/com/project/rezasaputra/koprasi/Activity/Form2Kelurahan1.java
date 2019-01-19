@@ -1,6 +1,7 @@
 package com.project.rezasaputra.koprasi.Activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -39,6 +40,7 @@ public class Form2Kelurahan1 extends AppCompatActivity {
 
     private static final String TAG = Login.class.getSimpleName();
     private SharedPreferences pref_idPerkembangan;
+    private SharedPreferences pref;
 
     private ProgressDialog pDialog;
     private Button btnNext;
@@ -81,12 +83,15 @@ public class Form2Kelurahan1 extends AppCompatActivity {
                 String dtvu = dataawal_vu.getText().toString().trim();
                 String bbvu = bulanberjalan_vu.getText().toString().trim();
 
+                pref = getSharedPreferences("data", Context.MODE_PRIVATE);
+                final String user = pref.getString("user_id", "");
+
                 final String idPer = pref_idPerkembangan.getString("id_perkembangan", "");
 
                 // ngecek apakah inputannya kosong atau Tidak
                 if (!idPer.isEmpty() && !bulanberjalanku.isEmpty() && !dtvu.isEmpty() && !bbvu.isEmpty()){
                     // input data
-                    checkUpload(idPer, bulanberjalanku, dtvu, bbvu);
+                    checkUpload(idPer, bulanberjalanku, dtvu, bbvu, user);
                     //Toast.makeText(getApplicationContext(), "idPer :" + idPer , Toast.LENGTH_LONG).show(); // display the current state for switch's
                 } else {
                     // jika inputan kosong tampilkan pesan
@@ -193,7 +198,7 @@ public class Form2Kelurahan1 extends AppCompatActivity {
     }
     //currency format
 
-    private void checkUpload(final String idPer, final String bulanberjalanku, final String dtvu, final String bbvu) {
+    private void checkUpload(final String idPer, final String bulanberjalanku, final String dtvu, final String bbvu, final String user) {
 
         // Tag biasanya digunakan ketika ingin membatalkan request volley
         String tag_string_req = "req_login";
@@ -262,6 +267,7 @@ public class Form2Kelurahan1 extends AppCompatActivity {
                 params.put("kegiatan_usaha_awal", bulanberjalanku);
                 params.put("volume_usaha_awal", dtvu);
                 params.put("volume_usaha_berjalan", bbvu);
+                params.put("user_id", user);
                 return params;
             }
         };

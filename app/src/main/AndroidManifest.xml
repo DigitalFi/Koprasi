@@ -101,7 +101,6 @@
             android:label=""
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".Activity.notifikasi_pemkod" />
         <activity
             android:name=".Activity.Form1Kelurahan2"
             android:label=""

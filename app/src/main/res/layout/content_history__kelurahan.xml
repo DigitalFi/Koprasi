@@ -49,16 +49,17 @@
         </FrameLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/main_list"
-                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             </android.support.v7.widget.RecyclerView>
+
 
         </LinearLayout>
 

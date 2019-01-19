@@ -55,6 +55,7 @@ public class Form3Kelurahan extends AppCompatActivity {
     private SharedPreferences idStatusf3;
     private SharedPreferences pref_idTemuan;
     private SharedPreferences getLoc;
+    private SharedPreferences pref;
 
     private EditText nm_kop, nobdn, tglbdn, almt, nm_pngl, tlp, jml_angt, sbrn_anggota, perizinan ;
     Button btnSubmit;
@@ -142,11 +143,13 @@ public class Form3Kelurahan extends AppCompatActivity {
                 getLoc = getSharedPreferences("location", MODE_PRIVATE);
                 final String Loc = getLoc.getString("LattitudeandLongti","");
 
+                pref = getSharedPreferences("data", Context.MODE_PRIVATE);
+                final String user = pref.getString("user_id", "");
 
                 // ngecek apakah inputannya kosong atau Tidak
                 if (!nama.isEmpty() &&  !no_badan.isEmpty() && !tgl_badan.isEmpty() && !alamat.isEmpty()&& !id_status.isEmpty()&& !nama_pengelola.isEmpty()&& !telepon.isEmpty()&& !jml_anggta.isEmpty() && !jml_anggta.isEmpty() && !sebaran.isEmpty() && !Loc.isEmpty() ){
                     // login user
-                    checkUpload(nama, no_badan, tgl_badan, alamat, id_status, nama_pengelola, telepon, jml_anggta, sebaran, Loc);
+                    checkUpload(nama, no_badan, tgl_badan, alamat, id_status, nama_pengelola, telepon, jml_anggta, sebaran, Loc, user);
 
                     Toast.makeText(getApplicationContext(), "Location :" + Loc , Toast.LENGTH_LONG).show(); // display the current state for switch's
 
@@ -251,7 +254,7 @@ public class Form3Kelurahan extends AppCompatActivity {
 
     }
 
-    private void checkUpload(final String nama, final String no_badan, final String tgl_badan, final String alamat, final String id_status, final String nama_pengelola, final String telepon, final String jml_anggta, final String sebaran, final String Loc) {
+    private void checkUpload(final String nama, final String no_badan, final String tgl_badan, final String alamat, final String id_status, final String nama_pengelola, final String telepon, final String jml_anggta, final String sebaran, final String Loc, final String user) {
 
         // Tag biasanya digunakan ketika ingin membatalkan request volley
         String tag_string_req = "req_login";
@@ -347,6 +350,7 @@ public class Form3Kelurahan extends AppCompatActivity {
                 params.put("jml_anggota", jml_anggta);
                 params.put("sebaran_anggota", sebaran);
                 params.put("location", Loc);
+                params.put("user_id", user);
 
                 return params;
             }

@@ -48,6 +48,7 @@ public class Form1Kelurahan3 extends AppCompatActivity {
     private SharedPreferences idkop;
     private SharedPreferences pref_idKelembagaan;
     private SharedPreferences idJabatan;
+    private SharedPreferences pref;
     private SharedPreferences status;
     private EditText inputNama;
     private EditText inputTlp;
@@ -128,6 +129,8 @@ public class Form1Kelurahan3 extends AppCompatActivity {
                         String nama = inputNama.getText().toString().trim();
                         String tlp = inputTlp.getText().toString().trim();
                         String alamat = inputAlamat.getText().toString().trim();
+                        pref = getSharedPreferences("data", Context.MODE_PRIVATE);
+                        final String user = pref.getString("user_name", "");
 
                         //memberikan status
                         SharedPreferences.Editor editor = status.edit();
@@ -137,7 +140,7 @@ public class Form1Kelurahan3 extends AppCompatActivity {
                         // ngecek apakah inputannya kosong atau Tidak
                         if (!jenisKlm.isEmpty() && !idKop.isEmpty() && !idKelembagaan.isEmpty() && !id_jabatan.isEmpty() &&  !nama.isEmpty() && !tlp.isEmpty() && !alamat.isEmpty()){
                             // login user
-                            checkUpload(jenisKlm, idKop, idKelembagaan, id_jabatan, nama, tlp, alamat);
+                            checkUpload(jenisKlm, idKop, idKelembagaan, id_jabatan, nama, tlp, alamat, user);
                             //Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "Switch1 :" + keaktifan + "\n" + "Switch2 :" + rapat + "\n" +  "jumlah :" + jumlah, Toast.LENGTH_LONG).show(); // display the current state for switch's
                         } else {
                             // jika inputan kosong tampilkan pesan
@@ -164,6 +167,8 @@ public class Form1Kelurahan3 extends AppCompatActivity {
                         String nama = inputNama.getText().toString().trim();
                         String tlp = inputTlp.getText().toString().trim();
                         String alamat = inputAlamat.getText().toString().trim();
+                        pref = getSharedPreferences("data", Context.MODE_PRIVATE);
+                        final String user = pref.getString("user_id", "");
 
                         //memberikan status
                         SharedPreferences.Editor editor = status.edit();
@@ -173,7 +178,7 @@ public class Form1Kelurahan3 extends AppCompatActivity {
                         // ngecek apakah inputannya kosong atau Tidak
                         if (!jenisKlm.isEmpty() && !idKop.isEmpty() && !idKelembagaan.isEmpty() && !id_jabatan.isEmpty() &&  !nama.isEmpty() && !tlp.isEmpty() && !alamat.isEmpty()){
                             // login user
-                            checkUpload(jenisKlm, idKop, idKelembagaan, id_jabatan, nama, tlp, alamat);
+                            checkUpload(jenisKlm, idKop, idKelembagaan, id_jabatan, nama, tlp, alamat, user);
                             //Toast.makeText(getApplicationContext(), "idKop :" + idKop + "\n" + "Switch1 :" + keaktifan + "\n" + "Switch2 :" + rapat + "\n" +  "jumlah :" + jumlah, Toast.LENGTH_LONG).show(); // display the current state for switch's
                         } else {
                             // jika inputan kosong tampilkan pesan
@@ -204,7 +209,7 @@ public class Form1Kelurahan3 extends AppCompatActivity {
     }
 
 
-    private void checkUpload(final String jenisKlm, final String idKop, final String idKelembagaan, final String id_jabatan, final String nama, final String tlp, final String alamat) {
+    private void checkUpload(final String jenisKlm, final String idKop, final String idKelembagaan, final String id_jabatan, final String nama, final String tlp, final String alamat, final String user) {
         // Tag biasanya digunakan ketika ingin membatalkan request volley
         String tag_string_req = "req_post_input";
         pDialog.setMessage("Loading ...");
@@ -299,6 +304,7 @@ public class Form1Kelurahan3 extends AppCompatActivity {
                 params.put("no_tlp", tlp);
                 params.put("alamat", alamat);
                 params.put("jen_kel", jenisKlm);
+                params.put("user_id", user);
 
                 return params;
             }

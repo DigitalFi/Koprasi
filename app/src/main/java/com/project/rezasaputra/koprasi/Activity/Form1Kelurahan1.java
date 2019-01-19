@@ -295,7 +295,7 @@ public class Form1Kelurahan1 extends AppCompatActivity {
         final String Loc = getLoc.getString("LattitudeandLongti","");
 
         pref = getSharedPreferences("data", Context.MODE_PRIVATE);
-        final String nama = pref.getString("user_name", "");
+        final String id = pref.getString("user_id", "");
 
         //our custom volley request
         VolleyMultipartRequest volleyMultipartRequest = new VolleyMultipartRequest(Request.Method.POST, AppConfig.URL_INPUT_KELEMBAGAAN,
@@ -345,7 +345,7 @@ public class Form1Kelurahan1 extends AppCompatActivity {
                 params.put("rapat_anggota", sw_rapat);
                 params.put("jml_anggota", jumlah);
                 params.put("location", Loc);
-                params.put("create_by", nama);
+                params.put("user_id", id);
                 return params;
             }
 

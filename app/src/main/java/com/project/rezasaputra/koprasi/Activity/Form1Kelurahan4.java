@@ -1,6 +1,7 @@
 package com.project.rezasaputra.koprasi.Activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -423,6 +424,8 @@ public class Form1Kelurahan4 extends AppCompatActivity {
 
                     final String idKop = idkop.getString("id_kop", "");
                     final String id_bidangusaha = idUsaha.getString("id_unit_usaha","");
+                    pref = getSharedPreferences("data", Context.MODE_PRIVATE);
+                    final String user = pref.getString("user_id", "");
                     String alamat = inputAlamat.getText().toString().trim();
                     String omzet = inputOmzet.getText().toString().trim();
                     String simpananpokok = inputSimpananPokok.getText().toString().trim();
@@ -436,7 +439,7 @@ public class Form1Kelurahan4 extends AppCompatActivity {
                     // ngecek apakah inputannya kosong atau Tidak
                     //if (bitmap != null){
                         // login user
-                        uploadBitmap(bitmap, idKop, id_bidangusaha, alamat, status, omzet, Loc, simpananpokok, jmlsimpananpokok, simpananwajib, jmlsimpananwajib, shutahunan);
+                        uploadBitmap(bitmap, idKop, id_bidangusaha, alamat, status, omzet, Loc, simpananpokok, jmlsimpananpokok, simpananwajib, jmlsimpananwajib, shutahunan, user);
                         //Toast.makeText(getApplicationContext(), "idkop:"+idKop + "idbidangusaha:"+id_bidangusaha +"alamat:"+ alamat +"omzet:"+ omzet +"loc:"+ Loc +"simpananpokok:"+ simpananpokok +"jmlhsimpanan:"+ jmlsimpananpokok +"jmlsimpananwjb:"+ jmlsimpananwajib +"shuthn:"+ shutahunan , Toast.LENGTH_LONG).show(); // display the current state for switch's
 
                     //} else {
@@ -464,7 +467,7 @@ public class Form1Kelurahan4 extends AppCompatActivity {
 
 
 
-    private void uploadBitmap(final Bitmap bitmap, final String idKop, final String id_bidangusaha, final String alamat, final String status, final String omzet, final String Loc, final String simpananpokok, final String jmlsimpananpokok, final String simpananwajib, final String jmlsimpananwajib, final String shutahunan) {
+    private void uploadBitmap(final Bitmap bitmap, final String idKop, final String id_bidangusaha, final String alamat, final String status, final String omzet, final String Loc, final String simpananpokok, final String jmlsimpananpokok, final String simpananwajib, final String jmlsimpananwajib, final String shutahunan, final String user) {
         //our custom volley request
         // Tag biasanya digunakan ketika ingin membatalkan request volley
         pDialog.setMessage("Loading ...");
@@ -519,6 +522,7 @@ public class Form1Kelurahan4 extends AppCompatActivity {
                 params.put("simp_wajib", simpananwajib);
                 params.put("jml_simp_wajib", jmlsimpananwajib);
                 params.put("shu_tahunan", shutahunan);
+                params.put("user_id", user);
                 return params;
             }
 

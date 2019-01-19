@@ -126,7 +126,7 @@ public class Form1Kelurahan2 extends AppCompatActivity {
                         final String idKelembagaan = pref_idKelembagaan.getString("id_kelembagaan","");
                         final String id_jabatan = idJabatan.getString("id_jabatan","");
                         pref = getSharedPreferences("data", Context.MODE_PRIVATE);
-                        final String user = pref.getString("user_name", "");
+                        final String user = pref.getString("user_id", "");
                         String nama = inputNama.getText().toString().trim();
                         String tlp = inputTlp.getText().toString().trim();
                         String alamat = inputAlamat.getText().toString().trim();
@@ -165,7 +165,7 @@ public class Form1Kelurahan2 extends AppCompatActivity {
                         final String idKelembagaan = pref_idKelembagaan.getString("id_kelembagaan","");
                         final String id_jabatan = idJabatan.getString("id_jabatan","");
                         pref = getSharedPreferences("data", Context.MODE_PRIVATE);
-                        final String user = pref.getString("user_name", "");
+                        final String user = pref.getString("user_id", "");
 
                         String nama = inputNama.getText().toString().trim();
                         String tlp = inputTlp.getText().toString().trim();
@@ -303,7 +303,7 @@ public class Form1Kelurahan2 extends AppCompatActivity {
                 params.put("no_tlp", tlp);
                 params.put("alamat", alamat);
                 params.put("jen_kel", jenisKlm);
-                params.put("create_by", user);
+                params.put("user_id", user);
 
                 return params;
             }

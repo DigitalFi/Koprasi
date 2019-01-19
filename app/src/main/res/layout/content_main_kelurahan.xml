@@ -123,6 +123,34 @@
                 </android.support.v7.widget.CardView>
             </RelativeLayout>
         </LinearLayout>
+        <!--atas-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="10dp">
+                <android.support.v7.widget.CardView
+                    android:onClick="history"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="30dp"
+                    app:cardBackgroundColor="#42aaf4">
+                    <TextView
+                        android:text="Lihat Koperasi"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"/>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

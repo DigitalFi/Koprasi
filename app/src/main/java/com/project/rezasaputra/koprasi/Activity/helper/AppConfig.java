@@ -45,6 +45,7 @@ public class AppConfig {
     public static String URL_GET_LIST_PEM = listpem+ "/list_approval_pemkot";
     public static String URL_POST_PRO_PEM = processpem+ "/process_data_pemkot";
     public static String URL_POST_HIS_KEC = historykec+ "/list_history";
+    public static String URL_LIST_KOP = "http://koperasidev.lavenderprograms.com/apigw/kunjungan/list_kunjungan";
 
     // Directory name to store captured images and videos
     public static final String IMAGE_DIRECTORY_NAME = "Android File Upload";
