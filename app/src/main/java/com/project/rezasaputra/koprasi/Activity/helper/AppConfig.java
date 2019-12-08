@@ -15,12 +15,12 @@ public class AppConfig {
     public static String perkembangan ="http://koperasidev.dfiserver.com/apigw/perkembangan";
     public static String perkembangan_usaha ="http://koperasidev.dfiserver.com/apigw/perkembangan";
     public static String perkembangan_keuangan ="http://koperasidev.dfiserver.com/apigw/perkembangan";
-    public static String temuan ="http://koperasidev.lavenderprograms.com/apigw/temuan";
-    public static String listkec ="http://koperasidev.lavenderprograms.com/apigw/approval";
-    public static String processkec ="http://koperasidev.lavenderprograms.com/apigw/approval";
-    public static String listpem ="http://koperasidev.lavenderprograms.com/apigw/approval";
-    public static String processpem ="http://koperasidev.lavenderprograms.com/apigw/approval";
-    public static String historykec ="http://koperasidev.lavenderprograms.com/apigw/history";
+    public static String temuan ="http://koperasidev.dfiserver.com/apigw/temuan";
+    public static String listkec ="http://koperasidev.dfiserver.com/apigw/approval";
+    public static String processkec ="http://koperasidev.dfiserver.com/apigw/approval";
+    public static String listpem ="http://koperasidev.dfiserver.com/apigw/approval";
+    public static String processpem ="http://koperasidev.dfiserver.com/apigw/approval";
+    public static String historykec ="http://koperasidev.dfiserver.com/apigw/history";
 
 
 
@@ -45,7 +45,7 @@ public class AppConfig {
     public static String URL_GET_LIST_PEM = listpem+ "/list_approval_pemkot";
     public static String URL_POST_PRO_PEM = processpem+ "/process_data_pemkot";
     public static String URL_POST_HIS_KEC = historykec+ "/list_history";
-    public static String URL_LIST_KOP = "http://koperasidev.lavenderprograms.com/apigw/kunjungan/list_kunjungan";
+    public static String URL_LIST_KOP = "http://koperasidev.dfiserver.com/apigw/kunjungan/list_kunjungan";
 
     // Directory name to store captured images and videos
     public static final String IMAGE_DIRECTORY_NAME = "Android File Upload";
