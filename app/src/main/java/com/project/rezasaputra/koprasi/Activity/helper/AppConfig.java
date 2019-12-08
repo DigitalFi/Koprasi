@@ -5,16 +5,16 @@ package com.project.rezasaputra.koprasi.Activity.helper;
  */
 
 public class AppConfig {
-    public static String url= "http://koperasidev.lavenderprograms.com/apigw";
-    public static String data= "http://koperasidev.lavenderprograms.com/apigw/koperasi";
-    public static String kelembagaan ="http://koperasidev.lavenderprograms.com/apigw/kelembagaan";
-    public static String pengawas ="http://koperasidev.lavenderprograms.com/apigw/pengawas";
-    public static String pengurus ="http://koperasidev.lavenderprograms.com/apigw/pengurus";
-    public static String keuangan ="http://koperasidev.lavenderprograms.com/apigw/bidang_usaha";
-    public static String getdatakopapproval ="http://koperasidev.lavenderprograms.com/apigw/perkembangan";
-    public static String perkembangan ="http://koperasidev.lavenderprograms.com/apigw/perkembangan";
-    public static String perkembangan_usaha ="http://koperasidev.lavenderprograms.com/apigw/perkembangan";
-    public static String perkembangan_keuangan ="http://koperasidev.lavenderprograms.com/apigw/perkembangan";
+    public static String url= "http://koperasidev.dfiserver.com/apigw";
+    public static String data= "http://koperasidev.dfiserver.com/apigw/koperasi";
+    public static String kelembagaan ="http://koperasidev.dfiserver.com/apigw/kelembagaan";
+    public static String pengawas ="http://koperasidev.dfiserver.com/apigw/pengawas";
+    public static String pengurus ="http://koperasidev.dfiserver.com/apigw/pengurus";
+    public static String keuangan ="http://koperasidev.dfiserver.com/apigw/bidang_usaha";
+    public static String getdatakopapproval ="http://koperasidev.dfiserver.com/apigw/perkembangan";
+    public static String perkembangan ="http://koperasidev.dfiserver.com/apigw/perkembangan";
+    public static String perkembangan_usaha ="http://koperasidev.dfiserver.com/apigw/perkembangan";
+    public static String perkembangan_keuangan ="http://koperasidev.dfiserver.com/apigw/perkembangan";
     public static String temuan ="http://koperasidev.lavenderprograms.com/apigw/temuan";
     public static String listkec ="http://koperasidev.lavenderprograms.com/apigw/approval";
     public static String processkec ="http://koperasidev.lavenderprograms.com/apigw/approval";
