@@ -64,7 +64,7 @@ public class Form3Kelurahan1 extends AppCompatActivity {
     private ProgressDialog pDialog;
 
     Spinner spinner;
-    String URL = "http://koperasidev.lavenderprograms.com/apigw/reff/type_legalitas";
+    String URL = "http://koperasidev.dfiserver.com/apigw/reff/type_legalitas";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

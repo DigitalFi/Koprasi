@@ -73,7 +73,7 @@ public class Form1Kelurahan4 extends AppCompatActivity {
     String mCurrentPhotoPath;
     static final int REQUEST_TAKE_PHOTO = 1;
     Spinner spinner;
-    String URL="http://koperasidev.lavenderprograms.com/apigw/reff/jenis_usaha";
+    String URL="http://koperasidev.dfiserver.com/apigw/reff/jenis_usaha";
 
 
     @Override
