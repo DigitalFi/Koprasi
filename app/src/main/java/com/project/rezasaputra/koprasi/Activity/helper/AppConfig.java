@@ -24,7 +24,7 @@ public class AppConfig {
 
 
 
-    public static String URL_LOGIN = url+"/auth/";
+    public static String URL_LOGIN = url+"/auth";
     public static String URL_KOPRASI = data+"/getkoperasibyid";
     public static String URL_DETIL = data+"/getdtlkoperasibyid";
     public static String URL_INPUT = url+"/kelembagaan";
